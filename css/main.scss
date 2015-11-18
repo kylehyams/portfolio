@@ -3,27 +3,37 @@
 --- */
 @charset "utf-8";
 
+@import "../_sass/_reset.scss";
+
 @import "../_sass/libraries/bourbon/_bourbon.scss";
 @import "../_sass/libraries/base/_base.scss";
 @import "../_sass/libraries/neat/_neat.scss";
 
 /* Header */
 header {
-	background: $olive;
 	@include outer-container;
+	background: $olive url('../assets/images/topographic_pattern.svg') 0 0 repeat;;
+	position: relative;
 	.header__container {
 		@include span-columns(12);
+		padding: 6rem 0;
+		@include linear-gradient(to bottom, rgba($olive, 0), darken($olive, 10%));
 		aside {
-			@include span-columns(10 of 12);
-			@include shift(1 of 12);
+			@include span-columns(12);
+			padding: 0 8.333333333%;
+			position: relative;
 			.logo {
 				width: 45px;
 				height: auto;
+				opacity: 0.5;
+				position: absolute;
+				top: -21px;
+				left: 14px;
 			}
 		}
 		article {
-			@include span-columns(10 of 12);
-			@include shift(1 of 12);
+			@include span-columns(10);
+			@include shift(1);
 		}
 	}
 }
