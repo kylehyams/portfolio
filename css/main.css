@@ -173,7 +173,8 @@ h1 {
   font-weight: 900;
   line-height: 8rem;
   letter-spacing: 0.15rem;
-  text-shadow: 0 5px 10px rgba(13, 27, 23, 0.25); }
+  text-shadow: 0 5px 10px rgba(13, 27, 23, 0.25);
+  margin: 0 0 3rem 0; }
 
 h6 {
   font-family: "Work Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
