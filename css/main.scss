@@ -1,0 +1,25 @@
+/* ---
+# Only the main Sass file needs front matter (the dashes are enough)
+--- */
+@charset "utf-8";
+
+@import "../_sass/libraries/bourbon/_bourbon.scss";
+@import "../_sass/libraries/base/_base.scss";
+@import "../_sass/libraries/neat/_neat.scss";
+
+/* Header */
+header {
+	background: $olive;
+	@include outer-container;
+	.header__container {
+		@include span-columns(12);
+		aside {
+			@include span-columns(10 of 12);
+			@include shift(1 of 12);
+		}
+		article {
+			@include span-columns(10 of 12);
+			@include shift(1 of 12);
+		}
+	}
+}

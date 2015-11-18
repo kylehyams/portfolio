@@ -1,0 +1,19 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Kyle Hyams | Designer
+email: hello@kylehya.ms
+description: > # this means to ignore newlines until "baseurl:"
+  Hello, world. I’m a designer and animator for Purple, Rock, Scissors in Orlando, Florida. I take pride in my ability to build what I design. Being able to make it move around the screen is pretty awesome, too.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+twitter_username: kylehyams
+github_username:  kylehyams
+
+# Build settings
+markdown: kramdown
