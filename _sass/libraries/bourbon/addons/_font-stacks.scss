@@ -1,5 +1,17 @@
 @charset "UTF-8";
 
+@font-face {
+	font-family: "Dala Floda Web";
+	src: url('../../../assets/fonts/DalaFloda-Bold-Web.eot');
+	src: url('../../../assets/fonts/DalaFloda-Bold-Web.eot?#iefix') format('embedded-opentype'),
+	url('../../../assets/fonts/DalaFloda-Bold-Web.woff') format('woff'),
+	url('../../../assets/fonts/DalaFloda-Bold-Web.ttf') format('truetype'),
+	url('../../../assets/fonts/DalaFloda-Bold-Web.svg#DalaFloda-Bold') format('svg');
+	font-weight: 700;
+	font-style: normal;
+	font-stretch: normal;
+}
+
 @import url(https://fonts.googleapis.com/css?family=Work+Sans:400,500|Playfair+Display:900);
 
 /// Georgia font stack.
@@ -35,7 +47,7 @@ $verdana: "Verdana", "Geneva", sans-serif;
 /// Dala Floda serif font stack.
 ///
 /// @type List
-$dala-floda: "Playfair Display", "Georgia", "Cambria", "Times New Roman", "Times", serif;
+$dala-floda: "Dala Floda Web", "Playfair Display", "Georgia", "Cambria", "Times New Roman", "Times", serif;
 
 /// Work Sans serif font stack.
 ///

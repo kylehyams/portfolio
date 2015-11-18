@@ -2,6 +2,14 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 --- */
 @import url(https://fonts.googleapis.com/css?family=Work+Sans:400,500|Playfair+Display:900);
+@font-face {
+  font-family: "Dala Floda Web";
+  src: url("../../../assets/fonts/DalaFloda-Bold-Web.eot");
+  src: url("../../../assets/fonts/DalaFloda-Bold-Web.eot?#iefix") format("embedded-opentype"), url("../../../assets/fonts/DalaFloda-Bold-Web.woff") format("woff"), url("../../../assets/fonts/DalaFloda-Bold-Web.ttf") format("truetype"), url("../../../assets/fonts/DalaFloda-Bold-Web.svg#DalaFloda-Bold") format("svg");
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal; }
+
 button, input[type="button"], input[type="reset"], input[type="submit"] {
   appearance: none;
   background-color: #477dca;
@@ -154,7 +162,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: "Playfair Display", "Georgia", "Cambria", "Times New Roman", "Times", serif;
+  font-family: "Dala Floda Web", "Playfair Display", "Georgia", "Cambria", "Times New Roman", "Times", serif;
   font-size: 1em;
   line-height: 1.2;
   margin: 0 0 0.75em; }
