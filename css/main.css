@@ -243,6 +243,9 @@ header {
       margin-left: 8.5298%; }
       header .header__container aside:last-child {
         margin-right: 0; }
+      header .header__container aside .logo {
+        width: 45px;
+        height: auto; }
     header .header__container article {
       float: left;
       display: block;

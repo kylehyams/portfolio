@@ -16,6 +16,10 @@ header {
 		aside {
 			@include span-columns(10 of 12);
 			@include shift(1 of 12);
+			.logo {
+				width: 45px;
+				height: auto;
+			}
 		}
 		article {
 			@include span-columns(10 of 12);
