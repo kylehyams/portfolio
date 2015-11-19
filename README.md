@@ -1,2 +1,2 @@
 # Portfolio
-The buidlout of my personal site. Forever a work in progress.
+The buildout of my personal site. Forever a work in progress.
