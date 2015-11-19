@@ -18,19 +18,9 @@ h4,
 h5 {
   font-family: $heading-font-family;
   font-size: $base-font-size;
+  font-weight: 700;
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
-}
-
-h1 {
-  color: $salmon;
-  font-size: 8rem;
-  font-weight: 900;
-  line-height: 8rem;
-  letter-spacing: 0.15rem;
-  text-shadow: 0 5px 10px rgba($olive-darker, 0.25);
-  margin: 0 0 3rem 0;
-  position: relative;
 }
 
 h6 {
@@ -38,6 +28,26 @@ h6 {
   font-size: $base-font-size;
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
+}
+
+h1 {
+  color: $salmon;
+  font-size: 8rem;
+  line-height: 8rem;
+  letter-spacing: 0.15rem;
+  text-shadow: 0 5px 10px rgba($olive-darker, 0.25);
+  margin: 0 0 3rem 0;
+  position: relative;
+  @media screen and (min-width: 768px) {
+    font-size: 9.6rem;
+    line-height: 9.6rem;
+    letter-spacing: 0.25rem;
+    margin: 0;
+  }
+  @media screen and (min-width: 1024px) {
+    font-size: 10.8rem;
+    line-height: 10.8rem;
+  }
 }
 
 p {
@@ -48,6 +58,9 @@ p {
     font-size: 1.8rem;
     line-height: 2.8rem;
     letter-spacing: 0.1rem;
+    @media screen and (min-width: 1024px) {
+      font-size: 2rem;
+    }
     a {
       color: $creme;
     }
