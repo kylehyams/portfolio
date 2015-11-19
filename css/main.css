@@ -268,7 +268,7 @@ html {
 
 /* Header */
 header {
-  max-width: 68em;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   background: #5b7366 url("../assets/images/topographic_pattern.svg") 0 0 repeat;
@@ -280,7 +280,7 @@ header {
   header .header__container {
     float: left;
     display: block;
-    margin-right: 2.35765%;
+    margin-right: 0%;
     width: 100%;
     padding: 6rem 0;
     background-color: rgba(91, 115, 102, 0);
@@ -291,7 +291,7 @@ header {
     header .header__container aside {
       float: left;
       display: block;
-      margin-right: 2.35765%;
+      margin-right: 0%;
       width: 100%;
       padding: 0 8.333333333%;
       position: relative; }
@@ -307,8 +307,8 @@ header {
     header .header__container article {
       float: left;
       display: block;
-      margin-right: 2.35765%;
-      width: 82.94039%;
-      margin-left: 8.5298%; }
+      margin-right: 0%;
+      width: 83.33333%;
+      margin-left: 8.33333%; }
       header .header__container article:last-child {
         margin-right: 0; }

@@ -3,10 +3,15 @@
 @import "../neat/neat-helpers";
 
 // Neat Overrides
-// $column: 90px;
-// $gutter: 30px;
-// $grid-columns: 12;
-// $max-width: 1200px;
+$column: 8.333333333%;
+$gutter: 0%;
+$grid-columns: 12;
+$max-width: 100%;
+
+$visual-grid: false;
+$visual-grid-color: $salmon;
+$visual-grid-index: front;
+$visual-grid-opacity: 0.5;
 
 // Neat Breakpoints
 $medium-screen: 600px;
