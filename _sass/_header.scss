@@ -16,7 +16,11 @@ header {
 		@include media($large-screen) {
 			height: 60rem;
 		}
+		@include media($xlarge-screen) {
+			height: 65rem;
+		}
 		aside {
+			// circle back and double check the aside's actual column count for small screens
 			@include span-columns(12);
 			padding: 0 8.333333333%;
 			position: relative;
@@ -33,17 +37,20 @@ header {
 				height: auto;
 				opacity: 0.5;
 				position: absolute;
-				top: -2.1rem;
-				left: 0.9rem;
+				top: -21px;
+				left: 9px;
 				@include media($medium-screen) {
 					width: 6rem;
-					top: -2.8rem;
-					left: -3.3rem;
+					top: -28px;
+					left: -33px;
 				}
 				@include media($large-screen) {
 					width: 6.5rem;
-					top: -3rem;
-					left: -3.7rem; 
+					top: -30px;
+					left: -37px; 
+				}
+				@include media($xlarge-screen) {
+					width: 7.5rem;
 				}
 			}
 		}

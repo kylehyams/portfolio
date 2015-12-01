@@ -33,20 +33,21 @@ h6 {
 h1 {
   color: $salmon;
   font-size: 8rem;
-  line-height: 8rem;
+  line-height: 1;
   letter-spacing: 0.15rem;
   text-shadow: 0 5px 10px rgba($olive-darker, 0.25);
   margin: 0 0 3rem 0;
   position: relative;
   @media screen and (min-width: 768px) {
     font-size: 9.6rem;
-    line-height: 9.6rem;
     letter-spacing: 0.25rem;
     margin: 0;
   }
   @media screen and (min-width: 1024px) {
     font-size: 10.8rem;
-    line-height: 10.8rem;
+  }
+  @media screen and (min-width: 1440px) {
+    font-size: 13.8rem;
   }
 }
 
