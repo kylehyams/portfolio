@@ -1,2 +1,2 @@
 # Portfolio
-The buildout of my personal site. Forever a work in progress.
+Built with Jekyll, Bourbon, Neat, Bitters, Gulp, and Browsersync. Forever a work in progress.
