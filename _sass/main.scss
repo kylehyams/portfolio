@@ -11,3 +11,16 @@
 
 @import "_syntax-highlighting.scss";
 @import "_header.scss";
+
+body {
+	background: $base-background-color;
+}
+
+.page-content {
+	@include outer-container;
+	padding: 6rem 0;
+	&__intro {
+		@include span-columns(10);
+		@include shift(1);
+	}
+}
