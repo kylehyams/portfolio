@@ -18,9 +18,28 @@ body {
 
 .page-content {
 	@include outer-container;
-	padding: 6rem 0;
-	&__intro {
+	background: url('../assets/images/topography.svg') center -200px no-repeat;
+	background-size: 29rem auto;
+	.featured {
 		@include span-columns(10);
 		@include shift(1);
+		&__copy {
+			text-align: center;
+			padding: 6rem 0;
+			&--paragraph {
+				margin: 6rem 0 0 0;
+			}
+		}
+	}
+	.featured-imagery {
+		@include span-columns(12);
+		background: url('../assets/images/wood_background.jpg') 0 0 no-repeat;
+		background-size: cover;
+		padding: 4rem 0;
+		&__container {
+			img {
+				margin: 0 auto;
+			}
+		}
 	}
 }
