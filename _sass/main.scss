@@ -17,28 +17,42 @@ body {
 }
 
 .page-content {
-	@include outer-container;
 	background: url('../assets/images/topography.svg') center -200px no-repeat;
 	background-size: 29rem auto;
+	@include media($medium-screen) {
+		background-position: center -215px;
+		background-size: 41rem auto;
+	}
 	.featured {
-		@include span-columns(10);
-		@include shift(1);
+		@include outer-container;
 		&__copy {
+			@include span-columns(10);
+			@include shift(1);
 			text-align: center;
 			padding: 6rem 0;
+			@include media($medium-screen) {
+				@include span-columns(8);
+				@include shift(2);
+				padding: 8rem 0;
+			}
 			&--paragraph {
 				margin: 6rem 0 0 0;
 			}
 		}
-	}
-	.featured-imagery {
-		@include span-columns(12);
-		background: url('../assets/images/wood_background.jpg') 0 0 no-repeat;
-		background-size: cover;
-		padding: 4rem 0;
-		&__container {
-			img {
-				margin: 0 auto;
+		&__imagery {
+			@include span-columns(12);
+			background: url('../assets/images/wood_background.jpg') 0 0 no-repeat;
+			background-size: cover;
+			text-align: center;
+			padding: 4rem 0;
+			@include media($medium-screen) {
+				padding: 6rem 0;
+			}
+			.wolfwithin--full {
+				@include media($medium-screen) {
+					width: 384px;
+					height: auto;
+				}
 			}
 		}
 	}
