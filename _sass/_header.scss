@@ -2,6 +2,7 @@ header {
 	@include outer-container;
 	background: $olive url('../assets/images/topographic_pattern.svg') 0 0 repeat;;
 	position: relative;
+	
 	.header__container {
 		@include span-columns(12);
 		padding: 6rem 0;
@@ -19,6 +20,7 @@ header {
 		@include media($xlarge-screen) {
 			height: 65rem;
 		}
+		
 		aside {
 			@include span-columns(10);
 			@include shift(1);
@@ -31,6 +33,7 @@ header {
 			@include media($large-screen) {
 				@include span-columns(4);
 			}
+			
 			.logo {
 				width: 4.5rem;
 				height: auto;
@@ -54,7 +57,9 @@ header {
 					left: -40px;
 				}
 			}
+			
 		}
+
 		article {
 			@include span-columns(10);
 			@include shift(1);
@@ -73,5 +78,7 @@ header {
 				padding: 0;
 			}
 		}
+
 	}
+
 }

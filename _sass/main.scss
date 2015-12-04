@@ -3,12 +3,15 @@
 --- */
 @charset "utf-8";
 
+// Reset
 @import "_reset.scss";
 
+// Libraries
 @import "libraries/bourbon/_bourbon.scss";
 @import "libraries/base/_base.scss";
 @import "libraries/neat/_neat.scss";
 
+// Everything else
 @import "_syntax-highlighting.scss";
 @import "_header.scss";
 
@@ -17,15 +20,21 @@ body {
 }
 
 .page-content {
-	background: url('../assets/images/topography.svg') center -200px no-repeat;
+	background: url('../assets/images/topography.svg') no-repeat;
+	background-position: center -200px;
 	background-size: 29rem auto;
 	@include media($medium-screen) {
-		background-position: center -215px;
+		background-position: center -210px;
 		background-size: 41rem auto;
 	}
-	.featured {
+	@include media($large-screen) {
+		background-position: center -215px;
+		background-size: 42rem auto;
+	}
+
+	.featured__copy {
 		@include outer-container;
-		&__copy {
+		&--container {
 			@include span-columns(10);
 			@include shift(1);
 			text-align: center;
@@ -35,25 +44,35 @@ body {
 				@include shift(2);
 				padding: 8rem 0;
 			}
-			&--paragraph {
-				margin: 6rem 0 0 0;
+			@include media($large-screen) {
+				padding: 12rem 0;
 			}
+			
+			.featured__copy--paragraph {
+				margin: 6rem 0 0 0;
+				@include media($large-screen) {
+					margin: 10rem 0 0 0;
+				}
+			}
+
 		}
-		&__imagery {
-			@include span-columns(12);
-			background: url('../assets/images/wood_background.jpg') 0 0 no-repeat;
-			background-size: cover;
-			text-align: center;
+	}
+
+	.featured__imagery {
+		@include outer-container;
+		background: url('../assets/images/wood_background.jpg') 0 0 no-repeat;
+		background-size: cover;
+		text-align: center;
+		&--container {
+			@include span-columns(8);
+			@include shift(2);
 			padding: 4rem 0;
 			@include media($medium-screen) {
+				@include span-columns(6);
+				@include shift(3);
 				padding: 6rem 0;
-			}
-			.wolfwithin--full {
-				@include media($medium-screen) {
-					width: 384px;
-					height: auto;
-				}
 			}
 		}
 	}
+
 }
