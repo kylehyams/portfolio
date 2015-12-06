@@ -1,0 +1,115 @@
+body {
+	background: $base-background-color;
+}
+
+.page-content {
+	background: url('../assets/images/topography.svg') no-repeat;
+	background-position: center -200px;
+	background-size: 29rem auto;
+	@include media($medium-screen) {
+		background-position: center -210px;
+		background-size: 41rem auto;
+	}
+	@include media($large-screen) {
+		background-position: center -215px;
+		background-size: 42rem auto;
+	}
+	@include media($xlarge-screen) {
+		background-position: center -260px;
+		background-size: 50rem auto;
+	}
+
+	.featured__copy {
+		@include outer-container;
+		&--container {
+			@include span-columns(10);
+			@include shift(1);
+			text-align: center;
+			padding: 6rem 0;
+			@include media($medium-screen) {
+				@include span-columns(8);
+				@include shift(2);
+				padding: 8rem 0;
+			}
+			@include media($large-screen) {
+				padding: 12rem 0;
+			}
+			@include media($xlarge-screen) {
+				@include span-columns(6);
+				@include shift(3);
+				padding: 14rem 0;
+			}
+			
+			.featured__copy--paragraph {
+				margin: 6rem 0 0 0;
+				@include media($large-screen) {
+					margin: 10rem 0 0 0;
+				}
+				@include media($xlarge-screen) {
+					margin: 12rem 0 0 0;
+				}
+			}
+
+		}
+	}
+
+	.featured__imagery {
+		@include outer-container;
+		background: url('../assets/images/wood_background.jpg') 0 0 no-repeat;
+		background-size: cover;
+		text-align: center;
+		@include media ($medium-screen) {
+			background: url('../assets/images/wood_background_medium.jpg') 0 0 no-repeat;
+			background-size: cover;
+		}
+		@include media ($large-screen) {
+			background: url('../assets/images/wood_background_large.jpg') 0 0 no-repeat;
+			background-size: cover;
+			border: solid 10px #F4D229;
+		}
+		@include media ($xlarge-screen) {
+			background: url('../assets/images/wood_background_xlarge.jpg') 0 0 no-repeat;
+			background-size: cover;
+			border: solid 15px #F4D229;
+		}
+		
+		&--container {
+			@include span-columns(8);
+			@include shift(2);
+			padding: 4rem 0;
+			@include media($medium-screen) {
+				@include span-columns(6);
+				@include shift(3);
+				padding: 6rem 0;
+			}
+			@include media($large-screen) {
+				padding: 10rem 6.4rem;
+			}
+			@include media($xlarge-screen) {
+				@include span-columns(4);
+				@include shift(4);
+				padding: 12rem 1rem;
+			}
+		}
+
+	}
+
+	.content__01 {
+		@include outer-container;
+		padding: 6rem 0;
+		position: relative;
+
+		aside {
+			@include span-columns(10);
+			@include shift(1);
+		}
+
+		article {
+			@include span-columns(10);
+			@include shift(1);
+			margin-top: 2rem;
+		}
+
+	}
+
+}

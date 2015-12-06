@@ -19,6 +19,7 @@ h5 {
   font-family: $heading-font-family;
   font-size: $base-font-size;
   font-weight: 700;
+  @include font-feature-settings("kern");
   // line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
 }
@@ -64,6 +65,15 @@ h2 {
   }
 }
 
+h3 {
+  color: $olive-dark;
+  font-size: 4.2rem;
+  line-height: 1;
+  letter-spacing: 0.125rem;
+  margin: 0;
+  position: relative;
+}
+
 h6 {
   color: $salmon;
   font-family: $base-font-family;
@@ -73,6 +83,9 @@ h6 {
   text-transform: uppercase;
   margin: 0;
   // margin: 0 0 $small-spacing;
+  @include hidpi(2) {
+      font-weight: 300;
+  }
   @media screen and (min-width: 768px) {
     font-size: 1.2rem;
     letter-spacing: 0.36rem;
@@ -87,6 +100,9 @@ p {
   margin: 0 0 $small-spacing;
   font-weight: 400;
   letter-spacing: 0.1rem;
+  @include hidpi(2) {
+      font-weight: 300;
+  }
   
   &.about {
     color: $creme;
@@ -104,7 +120,7 @@ p {
       color: $salmon;
       text-decoration: none;
       &:hover {
-        color: darken($salmon, 5%);
+        color: darken($salmon, 10%);
       }
     }
 
@@ -113,6 +129,9 @@ p {
   &.featured__intro {
     font-weight: 500;
     margin: 3rem 0;
+    @include hidpi(2) {
+        font-weight: 400;
+    }
     @media screen and (min-width: 768px) {
       font-size: 1.8rem;
     }
@@ -135,7 +154,7 @@ a {
   &:active,
   &:focus,
   &:hover {
-    color: shade($action-color, 25%);
+    color: shade($action-color, 10%);
   }
 }
 
@@ -160,4 +179,18 @@ img,
 picture {
   margin: 0;
   max-width: 100%;
+}
+
+.content__01-number,
+.content__02-number,
+.content__03-number {
+  color: $salmon;
+  font-family: $heading-font-family;
+  font-size: 8rem;
+  font-weight: 700;
+  @include font-feature-settings("lnum");
+  opacity: 0.4;
+  position: absolute;
+  top: 22px;
+  left: 10px;
 }
