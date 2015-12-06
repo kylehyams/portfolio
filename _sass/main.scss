@@ -75,6 +75,21 @@ body {
 		background: url('../assets/images/wood_background.jpg') 0 0 no-repeat;
 		background-size: cover;
 		text-align: center;
+		@include media ($medium-screen) {
+			background: url('../assets/images/wood_background_medium.jpg') 0 0 no-repeat;
+			background-size: cover;
+		}
+		@include media ($large-screen) {
+			background: url('../assets/images/wood_background_large.jpg') 0 0 no-repeat;
+			background-size: cover;
+			border: solid 10px #F4D229;
+		}
+		@include media ($xlarge-screen) {
+			background: url('../assets/images/wood_background_xlarge.jpg') 0 0 no-repeat;
+			background-size: cover;
+			border: solid 15px #F4D229;
+		}
+		
 		&--container {
 			@include span-columns(8);
 			@include shift(2);
@@ -84,7 +99,16 @@ body {
 				@include shift(3);
 				padding: 6rem 0;
 			}
+			@include media($large-screen) {
+				padding: 10rem 6.4rem;
+			}
+			@include media($xlarge-screen) {
+				@include span-columns(4);
+				@include shift(4);
+				padding: 12rem 1rem;
+			}
 		}
+
 	}
 
 }
