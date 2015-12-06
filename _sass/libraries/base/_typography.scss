@@ -58,6 +58,10 @@ h2 {
     font-size: 8.4rem;
     margin: 6rem 0;
   }
+  @media screen and (min-width: 1440px) {
+    font-size: 12rem;
+    margin: 8rem 0;
+  }
 }
 
 h6 {
@@ -83,6 +87,7 @@ p {
   margin: 0 0 $small-spacing;
   font-weight: 400;
   letter-spacing: 0.1rem;
+  
   &.about {
     color: $creme;
     font-size: 1.8rem;
@@ -94,6 +99,7 @@ p {
       font-size: 2.4rem;
       line-height: 3.4rem;
     }
+    
     a {
       color: $salmon;
       text-decoration: none;
@@ -101,7 +107,9 @@ p {
         color: darken($salmon, 5%);
       }
     }
+
   }
+
   &.featured__intro {
     font-weight: 500;
     margin: 3rem 0;
@@ -113,14 +121,17 @@ p {
       letter-spacing: 0.125rem;
       margin: 6rem 0;
     }
+    @media screen and (min-width: 1440px) {
+      font-size: 2.2rem;
+    }
   }
+
 }
 
 a {
   color: $action-color;
   text-decoration: underline;
   transition: color $base-duration $base-timing;
-
   &:active,
   &:focus,
   &:hover {
