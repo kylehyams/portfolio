@@ -191,11 +191,11 @@ picture {
 .content__03-number {
   color: $salmon;
   font-family: $heading-font-family;
-  font-size: 8rem;
+  font-size: 9.6rem;
   font-weight: 700;
   @include font-feature-settings("lnum");
   opacity: 0.4;
   position: absolute;
-  top: 22px;
+  top: 4px;
   left: 10px;
 }
