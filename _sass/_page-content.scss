@@ -104,6 +104,8 @@ body {
 		background-size: 29rem auto;
 		@include media($medium-screen) {
 			padding: 8rem 0;
+			background-position: -200px 166px;
+			background-size: 41rem auto;
 		}
 
 		aside {

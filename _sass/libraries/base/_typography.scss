@@ -198,4 +198,8 @@ picture {
   position: absolute;
   top: 0;
   left: 10px;
+  @media screen and (min-width: 768px) {
+    top: 20px;
+    left: 30px;
+  }
 }
