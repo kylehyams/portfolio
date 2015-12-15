@@ -71,6 +71,15 @@ h3 {
   letter-spacing: 0.125rem;
   margin: 0;
   position: relative;
+  @media screen and (min-width: 768px) {
+    font-size: 5.4rem;
+  }
+  @media screen and (min-width: 1024px) {
+    font-size: 7.2rem;
+  }
+  @media screen and (min-width: 1440px) {
+    font-size: 9.6rem;
+  }
 }
 
 h6 {
@@ -90,7 +99,7 @@ h6 {
     font-size: 1.4rem;
     letter-spacing: 0.45rem;
   }
-  @media screen and (min-width: 1152px) {
+  @media screen and (min-width: 1024px) {
     @include hidpi(2) {
         font-weight: 300;
     }
@@ -101,10 +110,17 @@ p {
   margin: 0 0 $small-spacing;
   font-weight: 400;
   letter-spacing: 0.1rem;
-  @media screen and (min-width: 1152px) {
+  @media screen and (min-width: 768px) {
+    font-size: 1.8rem;
+  }
+  @media screen and (min-width: 1024px) {
+    font-size: 2rem;
     @include hidpi(2) {
         font-weight: 300;
     }
+  }
+  @media screen and (min-width: 1440px) {
+    font-size: 2.2rem;
   }
   
   &.about {
@@ -140,7 +156,7 @@ p {
       letter-spacing: 0.125rem;
       margin: 6rem 0;
     }
-    @media screen and (min-width: 1152px) {
+    @media screen and (min-width: 1024px) {
       @include hidpi(2) {
           font-weight: 400;
       }
@@ -199,7 +215,17 @@ picture {
   top: 0;
   left: 10px;
   @media screen and (min-width: 768px) {
-    top: 20px;
+    font-size: 13rem;
+    top: 4px;
     left: 30px;
+  }
+  @media screen and (min-width: 1024px) {
+    font-size: 15.4rem;
+    top: 32px;
+    left: 40px;
+  }
+  @media screen and (min-width: 1440px) {
+    top: 130px;
+    left: 80px;
   }
 }

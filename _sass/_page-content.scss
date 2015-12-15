@@ -107,6 +107,16 @@ body {
 			background-position: -200px 166px;
 			background-size: 41rem auto;
 		}
+		@include media($large-screen) {
+			padding: 12rem 0;
+			background-position: -250px 220px;
+			background-size: 50rem auto;
+		}
+		@include media($large-screen) {
+			padding: 20rem 0;
+			background-position: -277px 345px;
+			background-size: 55rem auto;
+		}
 
 		aside {
 			@include span-columns(10);
@@ -125,6 +135,11 @@ body {
 				@include shift(0);
 				margin-top: 0;
 				padding: 0 0 0 4rem;
+			}
+			@include media($large-screen) {
+				@include span-columns(6);
+				@include shift(1)
+				padding: 0;
 			}
 		}
 
