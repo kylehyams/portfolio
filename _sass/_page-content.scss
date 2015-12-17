@@ -94,91 +94,101 @@ body {
 
 	}
 
-	.content__01 {
+	.content__01,
+	.content__02,
+	.content__03 {
 		@include outer-container;
-		padding: 6rem 0;
-		position: relative;
-		background: url('../assets/images/topography_02.svg') no-repeat;
-		background-position: -175px 230px;
-		background-size: 29rem auto;
-		@include media($medium-screen) {
-			padding: 8rem 0;
-			background-position: -200px 166px;
-			background-size: 41rem auto;
-		}
-		@include media($large-screen) {
-			padding: 12rem 0;
-			background-position: -250px 220px;
-			background-size: 50rem auto;
-		}
-		@include media($large-screen) {
-			padding: 20rem 0;
-			background-position: -277px 345px;
-			background-size: 55rem auto;
-		}
 
-		aside {
-			@include span-columns(10);
-			@include shift(1);
+		&--number {
+			@include span-columns(12);
+			padding: 6rem 0;
 			@include media($medium-screen) {
-				@include span-columns(3);
-			}
-		}
-
-		article {
-			@include span-columns(10);
-			@include shift(1);
-			margin-top: 2rem;
-			@include media($medium-screen) {
-				@include span-columns(7);
-				@include shift(0);
-				margin-top: 0;
-				padding: 0 0 0 4rem;
+				padding: 8rem 0;
 			}
 			@include media($large-screen) {
-				@include span-columns(6);
-				@include shift(1)
-				padding: 0;
+				padding: 12rem 0;
+			}
+			@include media($xlarge-screen) {
+				padding: 20rem 0;
 			}
 		}
 
 	}
 
-	.images__01 {
-		@include outer-container;
+	.content__01 {
+		background: url('../assets/images/topography_02.svg') no-repeat;
+		background-size: 29rem auto;
+		background-position: -175px 230px;
+		@include media($medium-screen) {
+			background-position: -200px 166px;
+			background-size: 41rem auto;
+		}
+		@include media($large-screen) {
+			background-position: -250px 220px;
+			background-size: 50rem auto;
+		}
+		@include media($xlarge-screen) {
+			background-position: -277px 345px;
+			background-size: 55rem auto;
+		}
 
-		&--image-left,
-		&--image-right {
-			@include span-columns (12);
-			line-height: 0;
+		&--number {
+			background: url('../assets/images/01.svg') no-repeat;
+			background-position: 12px 52px;
+			background-size: 8rem auto;
 			@include media($medium-screen) {
-				@include span-columns(6);
+				background-position: 30px 60px;
+				background-size: 11.8rem auto;
 			}
+			@include media($large-screen) {
+				background-position: 40px 101px;
+				background-size: 13.5rem auto;
+			}
+			@include media($xlarge-screen) {
+				background-position: 80px 190px;
+				background-size: 15rem auto;
+			}
+
+			aside {
+				@include span-columns(10);
+				@include shift(1);
+				@include media($medium-screen) {
+					@include span-columns(3);
+				}
+			}
+
+			article {
+				@include span-columns(10);
+				@include shift(1);
+				margin-top: 2rem;
+				@include media($medium-screen) {
+					@include span-columns(7);
+					@include shift(0);
+					margin-top: 0;
+					padding: 0 0 0 4rem;
+				}
+				@include media($large-screen) {
+					@include span-columns(6);
+					@include shift(1)
+					padding: 0;
+				}
+			}
+
 		}
 
 	}
 
 	.content__02 {
-		@include outer-container;
-		padding: 6rem 0;
-		position: relative;
-		// background: url('../assets/images/topography_02.svg') no-repeat;
-		// background-position: -175px 230px;
-		// background-size: 29rem auto;
+		background: url('../assets/images/topography_01.svg') no-repeat;
+		background-size: 29rem auto;
 		@include media($medium-screen) {
-			padding: 8rem 0;
-			// background-position: -200px 166px;
-			// background-size: 41rem auto;
+			background-size: 41rem auto;
 		}
 		@include media($large-screen) {
-			padding: 12rem 0;
-			// background-position: -250px 220px;
-			// background-size: 50rem auto;
+			background-size: 50rem auto;
 		}
 		@include media($large-screen) {
-			padding: 20rem 0;
-			// background-position: -277px 345px;
-			// background-size: 55rem auto;
+			background-size: 55rem auto;
 		}
 
 		@include direction-context(right-to-left) {
@@ -205,6 +215,22 @@ body {
 				@include span-columns(6);
 				@include shift(1)
 				padding: 0;
+			}
+		}
+
+	}
+
+	.images__01,
+	.images__02,
+	.images__03 {
+		@include outer-container;
+
+		&--image-left,
+		&--image-right {
+			@include span-columns (12);
+			line-height: 0;
+			@include media($medium-screen) {
+				@include span-columns(6);
 			}
 		}
 
