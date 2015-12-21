@@ -33,3 +33,43 @@
     }
   }
 }
+
+.button {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 6.2rem;
+  letter-spacing: 0.15rem;
+  text-align: center;
+  text-decoration: none;
+  border: solid 1px $salmon;
+  border-radius: $base-border-radius;
+  width: 21rem;
+  height: 6.5rem;
+  display: inline-block;
+  transition: background-color $base-duration $base-timing;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  margin: 2.5rem 0 0 0;
+  @media screen and (min-width: 768px) {
+    width: 20rem;
+  }
+  @media screen and (min-width: 1024px) {
+    margin: 4.5rem 0 0 0;
+  }
+  @media screen and (min-width: 1024px) {
+    @include hidpi(2) {
+        font-weight: 400;
+    }
+  }
+
+  &:hover {
+    color: $creme;
+    background: $action-color;
+  }
+
+  &:focus {
+    background: darken($action-color, 10%);
+  }
+
+}

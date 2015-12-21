@@ -181,41 +181,57 @@ body {
 	.content__02 {
 		background: url('../assets/images/topography_01.svg') no-repeat;
 		background-size: 29rem auto;
+		background-position: 215px 150px;
 		@include media($medium-screen) {
 			background-size: 41rem auto;
+			background-position: right 270px;
 		}
 		@include media($large-screen) {
 			background-size: 50rem auto;
+			background-position: right 318px;
 		}
-		@include media($large-screen) {
+		@include media($xlarge-screen) {
 			background-size: 55rem auto;
+			background-position: right 432px;
 		}
 
-		@include direction-context(right-to-left) {
-			aside {
-				@include span-columns(10);
-				@include shift(1);
-				@include media($medium-screen) {
-					@include span-columns(3);
+		&--number {
+			background: url('../assets/images/02.svg') no-repeat;
+			background-position: 12px 52px;
+			background-size: 8rem auto;
+			@include media($medium-screen) {
+				background-position: 478px 56px;
+				background-size: 13.5rem auto;
+			}
+
+			@include direction-context(right-to-left) {
+				aside {
+					@include span-columns(10);
+					@include shift(1);
+					@include media($medium-screen) {
+						@include span-columns(3);
+					}
 				}
 			}
-		}
 
-		article {
-			@include span-columns(10);
-			@include shift(1);
-			margin-top: 2rem;
-			@include media($medium-screen) {
-				@include span-columns(7);
-				@include shift(0);
-				margin-top: 0;
-				padding: 0 0 0 4rem;
+			article {
+				@include span-columns(10);
+				@include shift(1);
+				margin-top: 2rem;
+				@include media($medium-screen) {
+					@include span-columns(7);
+					@include shift(0);
+					margin-top: 0;
+					padding: 0 0 0 4rem;
+				}
+				@include media($large-screen) {
+					@include span-columns(6);
+					@include shift(1)
+					padding: 0;
+				}
+
 			}
-			@include media($large-screen) {
-				@include span-columns(6);
-				@include shift(1)
-				padding: 0;
-			}
+
 		}
 
 	}

@@ -136,10 +136,11 @@ p {
     }
     
     a {
-      color: $salmon;
+      color: $action-color;
+      text-shadow: 0 3px 6px rgba($olive-darker, 0.25);
       text-decoration: none;
       &:hover {
-        color: darken($salmon, 10%);
+        color: darken($action-color, 10%);
       }
     }
 
