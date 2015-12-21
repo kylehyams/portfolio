@@ -182,7 +182,12 @@ body {
 		background: url('../assets/images/topography_01.svg') no-repeat;
 		background-size: 29rem auto;
 		background-position: 215px 150px;
+		padding: 6rem 0;
+		// position: relative;
 		@include media($medium-screen) {
+			height: 47.4rem;
+			@include display(flex);
+			@include flex-direction(row-reverse);
 			background-size: 41rem auto;
 			background-position: right 270px;
 		}
@@ -195,41 +200,45 @@ body {
 			background-position: right 432px;
 		}
 
-		&--number {
-			background: url('../assets/images/02.svg') no-repeat;
-			background-position: 12px 52px;
-			background-size: 8rem auto;
-			@include media($medium-screen) {
-				background-position: 478px 56px;
-				background-size: 13.5rem auto;
-			}
-
-			@include direction-context(right-to-left) {
-				aside {
-					@include span-columns(10);
-					@include shift(1);
-					@include media($medium-screen) {
-						@include span-columns(3);
-					}
-				}
-			}
-
-			article {
+		@include direction-context(right-to-left) {
+			aside {
 				@include span-columns(10);
 				@include shift(1);
-				margin-top: 2rem;
+				position: relative;
 				@include media($medium-screen) {
-					@include span-columns(7);
-					@include shift(0);
-					margin-top: 0;
-					padding: 0 0 0 4rem;
-				}
-				@include media($large-screen) {
-					@include span-columns(6);
-					@include shift(1)
-					padding: 0;
+					@include span-columns(3);
 				}
 
+				&:before {
+					content: '02';
+					color: $salmon;
+					font-family: $heading-font-family;
+					font-size: 9.1rem;
+					font-weight: 700;
+					@include font-feature-settings("lnum");
+					opacity: 0.4;
+					position: absolute;
+					top: -54px;
+					left: -21px;
+				}
+
+			}
+		}
+
+		article {
+			@include span-columns(10);
+			@include shift(1);
+			margin-top: 2rem;
+			@include media($medium-screen) {
+				@include span-columns(7);
+				@include shift(0);
+				margin-top: 0;
+				padding: 0 4rem 0 0;
+			}
+			@include media($large-screen) {
+				@include span-columns(6);
+				@include shift(1)
+				padding: 0;
 			}
 
 		}
