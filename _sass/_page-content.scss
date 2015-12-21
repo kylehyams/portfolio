@@ -183,13 +183,11 @@ body {
 		background-size: 29rem auto;
 		background-position: 215px 150px;
 		padding: 6rem 0;
-		// position: relative;
 		@include media($medium-screen) {
 			height: 47.4rem;
-			@include display(flex);
-			@include flex-direction(row-reverse);
 			background-size: 41rem auto;
-			background-position: right 270px;
+			background-position: right 265px;
+			padding: 8rem 0;
 		}
 		@include media($large-screen) {
 			background-size: 50rem auto;
@@ -215,11 +213,17 @@ body {
 					font-family: $heading-font-family;
 					font-size: 9.1rem;
 					font-weight: 700;
-					@include font-feature-settings("lnum");
+					letter-spacing: -0.2rem;
+					@include font-feature-settings("pnum");
 					opacity: 0.4;
 					position: absolute;
 					top: -54px;
 					left: -21px;
+					@include media($medium-screen) {
+						font-size: 13.8rem;
+						top: -87px;
+						left: -36px;
+					}
 				}
 
 			}
@@ -230,10 +234,8 @@ body {
 			@include shift(1);
 			margin-top: 2rem;
 			@include media($medium-screen) {
-				@include span-columns(7);
-				@include shift(0);
+				@include span-columns(6);
 				margin-top: 0;
-				padding: 0 4rem 0 0;
 			}
 			@include media($large-screen) {
 				@include span-columns(6);
