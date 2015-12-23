@@ -184,18 +184,19 @@ body {
 		background-position: 215px 150px;
 		padding: 6rem 0;
 		@include media($medium-screen) {
-			height: 47.4rem;
 			background-size: 41rem auto;
-			background-position: right 265px;
+			background-position: right 280px;
 			padding: 8rem 0;
 		}
 		@include media($large-screen) {
 			background-size: 50rem auto;
 			background-position: right 318px;
+			padding: 12rem 0;
 		}
 		@include media($xlarge-screen) {
 			background-size: 55rem auto;
 			background-position: right 432px;
+			padding: 20rem 0;
 		}
 
 		@include direction-context(right-to-left) {
@@ -211,7 +212,7 @@ body {
 					content: '02';
 					color: $salmon;
 					font-family: $heading-font-family;
-					font-size: 9.1rem;
+					font-size: 10.2rem;
 					font-weight: 700;
 					letter-spacing: -0.2rem;
 					@include font-feature-settings("pnum");
@@ -223,6 +224,16 @@ body {
 						font-size: 13.8rem;
 						top: -87px;
 						left: -36px;
+					}
+					@include media($large-screen) {
+						font-size: 15.6rem;
+						top: -92px;
+						left: -48px;
+					}
+					@include media($large-screen) {
+						font-size: 18rem;
+						top: -97px;
+						left: -43px;
 					}
 				}
 
