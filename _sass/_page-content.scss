@@ -98,19 +98,48 @@ body {
 	.content__02,
 	.content__03 {
 		@include outer-container;
+		@include span-columns(12);
+		padding: 6rem 0;
+		@include media($medium-screen) {
+			padding: 8rem 0;
+		}
+		@include media($large-screen) {
+			padding: 12rem 0;
+		}
+		@include media($xlarge-screen) {
+			padding: 20rem 0;
+		}
 
-		&--number {
-			@include span-columns(12);
-			padding: 6rem 0;
-			@include media($medium-screen) {
-				padding: 8rem 0;
+		aside {
+			
+			&:before {
+				color: $salmon;
+				font-family: $heading-font-family;
+				font-size: 10.2rem;
+				font-weight: 700;
+				letter-spacing: -0.2rem;
+				@include font-feature-settings("pnum");
+				opacity: 0.4;
+				position: absolute;
+				top: -60px;
+				left: -21px;
+				@include media($medium-screen) {
+					font-size: 13.8rem;
+					top: -87px;
+					left: -36px;
+				}
+				@include media($large-screen) {
+					font-size: 15.6rem;
+					top: -92px;
+					left: -48px;
+				}
+				@include media($xlarge-screen) {
+					font-size: 18rem;
+					top: -97px;
+					left: -43px;
+				}
 			}
-			@include media($large-screen) {
-				padding: 12rem 0;
-			}
-			@include media($xlarge-screen) {
-				padding: 20rem 0;
-			}
+
 		}
 
 	}
@@ -120,7 +149,7 @@ body {
 		background-size: 29rem auto;
 		background-position: -175px 230px;
 		@include media($medium-screen) {
-			background-position: -200px 166px;
+			background-position: -200px 250px;
 			background-size: 41rem auto;
 		}
 		@include media($large-screen) {
@@ -132,48 +161,28 @@ body {
 			background-size: 55rem auto;
 		}
 
-		&--number {
-			background: url('../assets/images/01.svg') no-repeat;
-			background-position: 12px 52px;
-			background-size: 8rem auto;
+		aside {
+			@include span-columns(10);
+			@include shift(1);
+			position: relative;
 			@include media($medium-screen) {
-				background-position: 30px 60px;
-				background-size: 11.8rem auto;
-			}
-			@include media($large-screen) {
-				background-position: 40px 101px;
-				background-size: 13.5rem auto;
-			}
-			@include media($xlarge-screen) {
-				background-position: 80px 190px;
-				background-size: 15rem auto;
+				@include span-columns(3);
 			}
 
-			aside {
-				@include span-columns(10);
-				@include shift(1);
-				@include media($medium-screen) {
-					@include span-columns(3);
-				}
+			&:before {
+				content: '01';
 			}
 
-			article {
-				@include span-columns(10);
-				@include shift(1);
-				margin-top: 2rem;
-				@include media($medium-screen) {
-					@include span-columns(7);
-					@include shift(0);
-					margin-top: 0;
-					padding: 0 0 0 4rem;
-				}
-				@include media($large-screen) {
-					@include span-columns(6);
-					@include shift(1)
-					padding: 0;
-				}
-			}
+		}
 
+		article {
+			@include span-columns(10);
+			@include shift(1);
+			margin-top: 2rem;
+			@include media($medium-screen) {
+				@include span-columns(6);
+				margin-top: 0;
+			}
 		}
 
 	}
@@ -182,21 +191,17 @@ body {
 		background: url('../assets/images/topography_01.svg') no-repeat;
 		background-size: 29rem auto;
 		background-position: 215px 150px;
-		padding: 6rem 0;
 		@include media($medium-screen) {
 			background-size: 41rem auto;
 			background-position: right 280px;
-			padding: 8rem 0;
 		}
 		@include media($large-screen) {
 			background-size: 50rem auto;
 			background-position: right 318px;
-			padding: 12rem 0;
 		}
 		@include media($xlarge-screen) {
 			background-size: 55rem auto;
 			background-position: right 432px;
-			padding: 20rem 0;
 		}
 
 		@include direction-context(right-to-left) {
@@ -210,31 +215,6 @@ body {
 
 				&:before {
 					content: '02';
-					color: $salmon;
-					font-family: $heading-font-family;
-					font-size: 10.2rem;
-					font-weight: 700;
-					letter-spacing: -0.2rem;
-					@include font-feature-settings("pnum");
-					opacity: 0.4;
-					position: absolute;
-					top: -54px;
-					left: -21px;
-					@include media($medium-screen) {
-						font-size: 13.8rem;
-						top: -87px;
-						left: -36px;
-					}
-					@include media($large-screen) {
-						font-size: 15.6rem;
-						top: -92px;
-						left: -48px;
-					}
-					@include media($large-screen) {
-						font-size: 18rem;
-						top: -97px;
-						left: -43px;
-					}
 				}
 
 			}
@@ -248,12 +228,50 @@ body {
 				@include span-columns(6);
 				margin-top: 0;
 			}
-			@include media($large-screen) {
-				@include span-columns(6);
-				@include shift(1)
-				padding: 0;
+
+		}
+
+	}
+
+	.content__03 {
+		/* background: url('../assets/images/topography_02.svg') no-repeat;
+		background-size: 29rem auto;
+		background-position: -175px 230px;
+		@include media($medium-screen) {
+			background-position: -200px 250px;
+			background-size: 41rem auto;
+		}
+		@include media($large-screen) {
+			background-position: -250px 220px;
+			background-size: 50rem auto;
+		}
+		@include media($xlarge-screen) {
+			background-position: -277px 345px;
+			background-size: 55rem auto;
+		} */
+
+		aside {
+			@include span-columns(10);
+			@include shift(1);
+			position: relative;
+			@include media($medium-screen) {
+				@include span-columns(3);
 			}
 
+			&:before {
+				content: '03';
+			}
+
+		}
+
+		article {
+			@include span-columns(10);
+			@include shift(1);
+			margin-top: 2rem;
+			@include media($medium-screen) {
+				@include span-columns(6);
+				margin-top: 0;
+			}
 		}
 
 	}
