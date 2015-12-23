@@ -55,20 +55,20 @@ body {
 
 	.featured__imagery {
 		@include outer-container;
-		background: url('../assets/images/wood_background.jpg') 0 0 no-repeat;
+		background: url('../assets/images/wolfwithin_background.jpg') 0 0 no-repeat;
 		background-size: cover;
 		text-align: center;
 		@include media ($medium-screen) {
-			background: url('../assets/images/wood_background_medium.jpg') 0 0 no-repeat;
+			background: url('../assets/images/wolfwithin_background_medium.jpg') 0 0 no-repeat;
 			background-size: cover;
 		}
 		@include media ($large-screen) {
-			background: url('../assets/images/wood_background_large.jpg') 0 0 no-repeat;
+			background: url('../assets/images/wolfwithin_background_large.jpg') 0 0 no-repeat;
 			background-size: cover;
 			border: solid 10px #F4D229;
 		}
 		@include media ($xlarge-screen) {
-			background: url('../assets/images/wood_background_xlarge.jpg') 0 0 no-repeat;
+			background: url('../assets/images/wolfwithin_background_xlarge.jpg') 0 0 no-repeat;
 			background-size: cover;
 			border: solid 15px #F4D229;
 		}
@@ -116,7 +116,6 @@ body {
 				color: $salmon;
 				font-family: $heading-font-family;
 				font-size: 10.2rem;
-				font-weight: 700;
 				letter-spacing: -0.2rem;
 				@include font-feature-settings("pnum");
 				opacity: 0.4;
@@ -234,21 +233,21 @@ body {
 	}
 
 	.content__03 {
-		/* background: url('../assets/images/topography_02.svg') no-repeat;
+		background: url('../assets/images/topography_01.svg') no-repeat;
 		background-size: 29rem auto;
-		background-position: -175px 230px;
+		background-position: center 380px;
 		@include media($medium-screen) {
-			background-position: -200px 250px;
+			background-position: -200px 180px;
 			background-size: 41rem auto;
 		}
 		@include media($large-screen) {
-			background-position: -250px 220px;
+			background-position: -250px 230px;
 			background-size: 50rem auto;
 		}
 		@include media($xlarge-screen) {
-			background-position: -277px 345px;
+			background-position: -275px 345px;
 			background-size: 55rem auto;
-		} */
+		}
 
 		aside {
 			@include span-columns(10);
@@ -290,6 +289,13 @@ body {
 			}
 		}
 
+	}
+
+	.conclusion {
+		@include outer-container;
+		text-align: center;
+		background: url('../assets/images/wood_background.jpg') no-repeat $olive;
+		background-size: cover;
 	}
 
 }
