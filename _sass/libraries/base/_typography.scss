@@ -19,14 +19,13 @@ h5 {
   font-family: $heading-font-family;
   font-size: $base-font-size;
   @include font-feature-settings("kern");
-  // line-height: $heading-line-height;
-  margin: 0 0 $small-spacing;
+  line-height: $heading-line-height;
+  // margin: 0 0 $small-spacing;
 }
 
 h1 {
-  color: $salmon;
+  color: $action-color;
   font-size: 8rem;
-  line-height: 1;
   letter-spacing: 0.15rem;
   text-shadow: 0 5px 10px rgba($olive-darker, 0.25);
   margin: 0 0 3rem 0;
@@ -47,7 +46,6 @@ h1 {
 h2 {
   color: $olive-dark;
   font-size: 4.8rem;
-  line-height: 1;
   letter-spacing: 0.15rem;
   margin: 4rem 0;
   @media screen and (min-width: 768px) {
@@ -67,7 +65,6 @@ h2 {
 h3 {
   color: $olive-dark;
   font-size: 4.2rem;
-  line-height: 1;
   letter-spacing: 0.125rem;
   margin: 0;
   position: relative;
@@ -82,11 +79,32 @@ h3 {
   }
 }
 
+h4 {
+  color: $action-color;
+  font-size: 3.6rem;
+  letter-spacing: 0.125rem;
+  text-shadow: 0 3px 5px rgba($olive-darker, 0.1);
+  margin: 0 0 2rem 0;
+  @media screen and (min-width: 768px) {
+    font-size: 4.8rem;
+    letter-spacing: 0.175rem;
+    margin: 0 0 3rem 0;
+  }
+  @media screen and (min-width: 1024px) {
+    font-size: 6.6rem;
+    letter-spacing: 0.25rem;
+    margin: 0 0 4rem 0;
+  }
+  @media screen and (min-width: 1440px) {
+    font-size: 8.4rem;
+    letter-spacing: 0.2rem;
+    margin: 0 0 6rem 0;
+  }
+}
+
 h6 {
-  color: $salmon;
+  color: $action-color;
   font-family: $base-font-family;
-  font-size: 1rem;
-  line-height: $heading-line-height;
   letter-spacing: 0.3rem;
   text-transform: uppercase;
   margin: 0;
@@ -107,11 +125,13 @@ h6 {
 }
 
 p {
-  margin: 0 0 $small-spacing;
+  // margin: 0 0 $small-spacing;
   font-weight: 400;
   letter-spacing: 0.1rem;
+  margin: 0 0 2rem 0;
   @media screen and (min-width: 768px) {
     font-size: 1.8rem;
+    margin: 0 0 3rem 0;
   }
   @media screen and (min-width: 1024px) {
     font-size: 2rem;
@@ -167,6 +187,30 @@ p {
     }
   }
 
+  &.conclusion__copy {
+    color: $creme;
+    font-weight: 500;
+    line-height: 2.4rem;
+    @media screen and (min-width: 768px) {
+      font-size: 1.8rem;
+      line-height: 2.6rem;
+    }
+    @media screen and (min-width: 1024px) {
+      font-size: 2rem;
+      line-height: 2.8rem;
+    }
+    @media screen and (min-width: 1024px) {
+      @include hidpi(2) {
+          font-weight: 400;
+      }
+    }
+    @media screen and (min-width: 1440px) {
+      font-size: 2.2rem;
+      line-height: 3.4rem;
+      letter-spacing: 0.05rem;
+    }
+  }
+
 }
 
 a {
@@ -202,31 +246,3 @@ picture {
   margin: 0;
   max-width: 100%;
 }
-
-/* .content__01--number,
-.content__02--number,
-.content__03--number {
-  color: $salmon;
-  font-family: $heading-font-family;
-  font-size: 10rem;
-  font-weight: 700;
-  @include font-feature-settings("lnum");
-  opacity: 0.4;
-  position: absolute;
-  top: 0;
-  left: 10px;
-  @media screen and (min-width: 768px) {
-    font-size: 13rem;
-    top: 4px;
-    left: 30px;
-  }
-  @media screen and (min-width: 1024px) {
-    font-size: 15.4rem;
-    top: 32px;
-    left: 40px;
-  }
-  @media screen and (min-width: 1440px) {
-    top: 130px;
-    left: 80px;
-  }
-} */

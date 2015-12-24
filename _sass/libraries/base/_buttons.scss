@@ -71,10 +71,18 @@
   &:hover {
     color: $creme;
     background: $action-color;
+    @include transform(scale(0.98));
+    @include transition-property(transform);
+    @include transition-duration($base-duration);
+    @include transition-timing-function($base-timing);
   }
 
   &:focus {
     background: darken($action-color, 10%);
+    @include transform(scale(0.95));
+    @include transition-property(transform);
+    @include transition-duration($base-duration);
+    @include transition-timing-function($base-timing);
   }
 
 }

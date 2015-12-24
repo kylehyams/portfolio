@@ -296,6 +296,37 @@ body {
 		text-align: center;
 		background: url('../assets/images/wood_background.jpg') no-repeat $olive;
 		background-size: cover;
+		padding: 6rem 0;
+		@include media($medium-screen) {
+			background: url('../assets/images/wood_background_medium.jpg') no-repeat $olive;
+			background-size: cover;
+		}
+		@include media($large-screen) {
+			background: url('../assets/images/wood_background_large.jpg') no-repeat $olive;
+			background-size: cover;
+			padding: 8rem 0;
+		}
+		@include media($xlarge-screen) {
+			background: url('../assets/images/wood_background_xlarge.jpg') no-repeat $olive;
+			background-size: cover;
+			padding: 14rem 6rem;
+		}
+
+		&__inner {
+			@include span-columns(10);
+			@include shift(1);
+			@include media($medium-screen) {
+				border: solid 1px $action-color;
+				padding: 4rem 7.9rem;
+			}
+			@include media($large-screen) {
+				padding: 6rem 8.5rem;
+			}
+			@include media($xlarge-screen) {
+				padding: 10rem 18rem;
+			}
+		}
+
 	}
 
 }
