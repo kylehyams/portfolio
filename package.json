@@ -1,21 +1,22 @@
 {
   "name": "portfolio",
   "version": "0.0.0",
-  "description": "",
+  "description": "Code for my personal website. Forever a work in progress.",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Kyle Hyams",
   "license": "ISC",
   "devDependencies": {
     "gulp": "~3.9.0",
     "gulp-sass": "~2.1.0",
     "browser-sync": "~2.10.0",
-    "gulp-ruby-sass": "~2.0.6"
-  }
-},
-"repository": {
+    "gulp-ruby-sass": "~2.0.6",
+    "gulp-concat": "~2.6.0"
+  },
+  "repository": {
     "type": "git",
     "url": "https://github.com/kylehyams/portfolio"
   }
+}
