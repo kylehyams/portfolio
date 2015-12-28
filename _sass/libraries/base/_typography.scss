@@ -102,6 +102,13 @@ h4 {
   }
 }
 
+h5 {
+  color: $action-color;
+  font-size: 3.3rem;
+  letter-spacing: 0.125rem;
+  margin: 0 0 2rem 0;
+}
+
 h6 {
   color: $action-color;
   font-family: $base-font-family;
@@ -209,6 +216,16 @@ p {
       line-height: 3.4rem;
       letter-spacing: 0.05rem;
     }
+  }
+
+  &.footer__copy {
+    color: $creme;
+  }
+
+  &.footer__colophon {
+    font-size: 1.4rem;
+    // letter-spacing: 0.05rem;
+    margin: 8rem 0 0 0;
   }
 
 }

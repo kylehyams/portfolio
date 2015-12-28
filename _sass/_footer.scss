@@ -1,0 +1,26 @@
+footer {
+	@include outer-container;
+	background: $olive-dark;
+	padding: 0 0 6rem 0;
+
+	.footer__left {
+		@include span-columns(12);
+		position: relative;
+
+		&:before {
+			content: '';
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			@include linear-gradient(to bottom, rgba($olive-dark, 0), rgba($olive-dark,0.85), rgba($olive-dark, 1));
+		}
+
+	}
+
+	.footer__right {
+		@include span-columns(10);
+		@include shift(1);
+		padding: 3rem 0 0 0;
+	}
+
+}
