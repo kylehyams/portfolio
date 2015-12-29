@@ -5,6 +5,7 @@ var browserSync = require('browser-sync');
 var sass        = require('gulp-sass');
 // var sass        = require ('gulp-ruby-sass');
 var cp          = require('child_process');
+var concat      = require('gulp-concat');
 
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -29,7 +30,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 /**
  * Wait for jekyll-build, then launch the Server
  */
-gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
+gulp.task('browser-sync', ['concatScripts', 'sass', 'jekyll-build'], function() {
     browserSync({
         server: {
             baseDir: '_site'
@@ -38,7 +39,8 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
 });
 
 /**
- * Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
+ * Compile files from _scss into both _site/css (for live injecting)
+ * and site (for future jekyll builds)
  */
 gulp.task('sass', function () {
     gulp.src('_sass/main.scss')
@@ -62,16 +64,29 @@ gulp.task('sass', function () {
 // });
 
 /**
+ * Concatenate js files
+ */
+ gulp.task('concatScripts', function() {
+    gulp.src('_js/picturefill.js')
+    .on('error', browserSync.notify)
+    .pipe(concat('scripts.js'))
+    .pipe(gulp.dest('_site/js'))
+    .pipe(browserSync.reload({stream:true}));
+ });
+
+/**
  * Watch scss files for changes & recompile
+ * Watch js files & concatenate
  * Watch html/md files, run jekyll & reload BrowserSync
  */
 gulp.task('watch', function () {
     gulp.watch(['_sass/libraries/bourbon/*.scss', '_sass/libraries/neat/*.scss', '_sass/libraries/base/*.scss', '_sass/*.scss'], ['sass']);
+    gulp.watch(['_js/*.js'], ['concatScripts']);
     gulp.watch(['*.html', '_includes/*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
 });
 
 /**
- * Default task, running just `gulp` will compile the sass,
+ * Default task, running just `gulp` will compile the sass, concatenate js files,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('default', ['browser-sync', 'watch']);
+gulp.task('default', ['browser-sync', 'concatScripts', 'watch']);
