@@ -224,15 +224,24 @@ p {
 
   &.footer__colophon {
     font-size: 1.4rem;
-    // letter-spacing: 0.05rem;
-    margin: 8rem 0 0 0;
+    margin: 0;
+
+    a {
+      color: $olive;
+
+      &:hover {
+        color: darken($olive, 10%);
+      }
+
+    }
+
   }
 
 }
 
 a {
   color: $action-color;
-  text-decoration: underline;
+  text-decoration: none;
   transition: color $base-duration $base-timing;
   &:active,
   &:focus,

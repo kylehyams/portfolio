@@ -3,9 +3,17 @@ footer {
 	background: $olive-dark;
 	padding: 0 0 6rem 0;
 
-	.footer__left {
+	@include media($medium-screen) {
+		padding: 0;
+	}
+
+	aside {
 		@include span-columns(12);
 		position: relative;
+
+		@include media($medium-screen) {
+			@include span-columns(6);
+		}
 
 		&:before {
 			content: '';
@@ -13,14 +21,47 @@ footer {
 			height: 100%;
 			position: absolute;
 			@include linear-gradient(to bottom, rgba($olive-dark, 0), rgba($olive-dark,0.85), rgba($olive-dark, 1));
+
+			@include media($medium-screen) {
+				@include linear-gradient(to right, rgba($olive-dark, 0), rgba($olive-dark,0.85), rgba($olive-dark, 1));	
+			}
+
 		}
 
 	}
 
-	.footer__right {
+	article {
 		@include span-columns(10);
 		@include shift(1);
 		padding: 3rem 0 0 0;
+
+		@include media($medium-screen) {
+			@include span-columns(5);
+			@include shift(0);
+			padding: 6rem 0;
+		}
+
+		.social__media {
+			height: 3rem;
+			@include display(flex);
+			@include flex-direction(row);
+			@include justify-content(space-between);
+			margin: 6rem 0 8rem 0;
+
+			li {
+
+				a {
+
+					svg {
+						height: 3rem;
+					}
+
+				}
+
+			}
+
+		}
+
 	}
 
 }
