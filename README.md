@@ -1,2 +1,2 @@
 # Portfolio
-Built with Jekyll, Bourbon, Neat, Bitters, Gulp, and Browsersync. Forever a work in progress.
+Built with Jekyll, Sass, Bourbon, Neat, Bitters, Gulp, and Browsersync. Forever a work in progress.
