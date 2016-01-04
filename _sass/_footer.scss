@@ -9,10 +9,16 @@ footer {
 
 	aside {
 		@include span-columns(12);
+		height: 32rem;
+		background: url('../assets/images/headshot.jpg') no-repeat;
+		background-size: cover;
 		position: relative;
 
 		@include media($medium-screen) {
 			@include span-columns(6);
+			height: 57rem;
+			background: url('../assets/images/headshot_medium.jpg') no-repeat;
+			background-size: cover;
 		}
 
 		&:before {
@@ -38,7 +44,11 @@ footer {
 		@include media($medium-screen) {
 			@include span-columns(5);
 			@include shift(0);
-			padding: 6rem 0;
+			height: 57rem;
+			@include display(flex);
+			@include flex-direction(column);
+			@include justify-content(center);
+			padding: 0;
 		}
 
 		.social__media {
@@ -48,12 +58,21 @@ footer {
 			@include justify-content(space-between);
 			margin: 6rem 0 8rem 0;
 
+			@include media($medium-screen) {
+				height: 2.8rem;
+				margin: 4rem 0;
+			}
+
 			li {
 
 				a {
 
 					svg {
 						height: 3rem;
+
+						@include media($medium-screen) {
+							height: 2.8rem;
+						}
 					}
 
 				}

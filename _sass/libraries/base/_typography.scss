@@ -220,14 +220,20 @@ p {
 
   &.footer__copy {
     color: $creme;
+
+    @media screen and (min-width: 768px) {
+      margin: 0.5rem 0 0 0;
+    }
   }
 
   &.footer__colophon {
     font-size: 1.4rem;
+    line-height: 1.75;
     margin: 0;
 
     a {
       color: $olive;
+      text-decoration: underline;
 
       &:hover {
         color: darken($olive, 10%);
