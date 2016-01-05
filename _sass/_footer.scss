@@ -21,6 +21,18 @@ footer {
 			background-size: cover;
 		}
 
+		@include media($large-screen) {
+			height: 65rem;
+			background: url('../assets/images/headshot_large.jpg') no-repeat;
+			background-size: cover;
+		}
+
+		@include media($xlarge-screen) {
+			height: 83rem;
+			background: url('../assets/images/headshot_xlarge.jpg') no-repeat;
+			background-size: cover;
+		}
+
 		&:before {
 			content: '';
 			width: 100%;
@@ -51,6 +63,14 @@ footer {
 			padding: 0;
 		}
 
+		@include media($large-screen) {
+			height: 65rem;
+		}
+
+		@include media($xlarge-screen) {
+			height: 83rem;
+		}
+
 		.social__media {
 			height: 3rem;
 			@include display(flex);
@@ -59,8 +79,18 @@ footer {
 			margin: 6rem 0 8rem 0;
 
 			@include media($medium-screen) {
-				height: 2.8rem;
+				height: 3rem;
 				margin: 4rem 0;
+			}
+
+			@include media($large-screen) {
+				height: 3.5rem;
+				margin: 4rem 0 6rem;
+			}
+
+			@include media($xlarge-screen) {
+				height: 4rem;
+				margin: 8rem 0 10rem;
 			}
 
 			li {
@@ -71,7 +101,15 @@ footer {
 						height: 3rem;
 
 						@include media($medium-screen) {
-							height: 2.8rem;
+							height: 3rem;
+						}
+
+						@include media($large-screen) {
+							height: 3.5rem;
+						}
+
+						@include media($xlarge-screen) {
+							height: 4rem;
 						}
 					}
 
