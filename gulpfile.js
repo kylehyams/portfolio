@@ -30,7 +30,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 /**
  * Wait for jekyll-build, then launch the Server
  */
-gulp.task('browser-sync', ['concatScripts', 'sass', 'jekyll-build'], function() {
+gulp.task('browser-sync', ['compileSass', 'concatScripts', 'jekyll-build'], function() {
     browserSync({
         server: {
             baseDir: '_site'
@@ -42,7 +42,7 @@ gulp.task('browser-sync', ['concatScripts', 'sass', 'jekyll-build'], function() 
  * Compile files from _scss into both _site/css (for live injecting)
  * and site (for future jekyll builds)
  */
-gulp.task('sass', function () {
+gulp.task('compileSass', function () {
     gulp.src('_sass/main.scss')
         .pipe(sass({
             includePaths: ['./_sass'],
@@ -68,10 +68,10 @@ gulp.task('sass', function () {
  */
  gulp.task('concatScripts', function() {
     gulp.src('_js/picturefill.js')
-    .on('error', browserSync.notify)
-    .pipe(concat('scripts.js'))
-    .pipe(gulp.dest('_site/js'))
-    .pipe(browserSync.reload({stream:true}));
+        .on('error', browserSync.notify)
+        .pipe(concat('scripts.js'))
+        .pipe(gulp.dest('_site/js'))
+        .pipe(browserSync.reload({stream:true}));
  });
 
 /**
@@ -79,14 +79,20 @@ gulp.task('sass', function () {
  * Watch js files & concatenate
  * Watch html/md files, run jekyll & reload BrowserSync
  */
-gulp.task('watch', function () {
-    gulp.watch(['_sass/libraries/bourbon/*.scss', '_sass/libraries/neat/*.scss', '_sass/libraries/base/*.scss', '_sass/*.scss'], ['sass']);
-    gulp.watch(['_js/*.js'], ['concatScripts']);
-    gulp.watch(['*.html', '_includes/*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
-});
+//gulp.task('watch', function () {
+//    gulp.watch(['_sass/libraries/bourbon/*.scss', '_sass/libraries/neat/*.scss', '_sass/libraries/base/*.scss', '_sass/*.scss'], ['sass']);
+//    gulp.watch('_js/*.js', ['concatScripts', 'jekyll-rebuild']);
+//    gulp.watch(['*.html', '_includes/*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
+//});
 
 /**
  * Default task, running just `gulp` will compile the sass, concatenate js files,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('default', ['browser-sync', 'concatScripts', 'watch']);
+//gulp.task('default', ['browser-sync', 'watch']);
+
+gulp.task('default', ['compileSass', 'concatScripts', 'browser-sync'], function () {
+    gulp.watch(['_sass/libraries/bourbon/*.scss', '_sass/libraries/neat/*.scss', '_sass/libraries/base/*.scss', '_sass/*.scss'], ['compileSass', 'jekyll-rebuild']);
+    gulp.watch('_js/*.js', ['concatScripts', 'jekyll-rebuild']);
+    gulp.watch(['*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
+});
