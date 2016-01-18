@@ -2,7 +2,6 @@
 
 var gulp        = require('gulp');
 var browserSync = require('browser-sync');
-//var sass        = require('gulp-sass');
 var sass        = require ('gulp-ruby-sass');
 var cp          = require('child_process');
 var concat      = require('gulp-concat');
@@ -37,21 +36,6 @@ gulp.task('browser-sync', ['jekyll-build', 'compileSass', 'concatScripts'], func
         }
     });
 });
-
-/**
- * Compile files from _scss into both _site/css (for live injecting)
- * and site (for future jekyll builds)
- */
-//gulp.task('compileSass', function () {
-//    gulp.src('_sass/main.scss')
-//        .pipe(sass({
-//            includePaths: ['./_sass'],
-//            onError: browserSync.notify
-//        }))
-//        .pipe(gulp.dest('_site/css'))
-//        .pipe(browserSync.reload({stream:true}))
-//        .pipe(gulp.dest('css'));
-//});
 
 /**
  * Compile scss files
