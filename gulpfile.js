@@ -1,11 +1,14 @@
 'use strict';
 
-var gulp        = require('gulp');
-var browserSync = require('browser-sync');
-var sass        = require ('gulp-ruby-sass');
-var cp          = require('child_process');
-var concat      = require('gulp-concat');
-var imagemin    = require('gulp-imagemin');
+var gulp        = require('gulp'),
+    browserSync = require('browser-sync'),
+    cp          = require('child_process'),
+    sass        = require('gulp-ruby-sass'),
+    maps        = require('gulp-sourcemaps'),
+    concat      = require('gulp-concat'),
+    uglify      = require('gulp-uglify'),
+    imagemin    = require('gulp-imagemin'),
+    rename      = require('gulp-rename');
 //var pngquant    = require('imagemin-pngquant');
 
 var messages = {
@@ -31,7 +34,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 /**
  * Wait for jekyll-build, then launch the Server
  */
-gulp.task('browser-sync', ['jekyll-build', 'compileSass', 'concatScripts'], function() {
+gulp.task('browser-sync', ['jekyll-build', 'compileSass', 'concatScripts', 'minifyScripts'], function() {
     browserSync({
         server: {
             baseDir: '_site'
@@ -40,13 +43,13 @@ gulp.task('browser-sync', ['jekyll-build', 'compileSass', 'concatScripts'], func
 });
 
 /**
- * Compile scss files
+ * Compile scss files and create a source map
  */
 gulp.task('compileSass', function () {
     gulp.src('_sass/main.scss')
         //.on('error', browserSync.notify)
         .pipe(gulp.dest('css'))
-        .pipe(gulp.dest('_site/css/'))
+        //.pipe(gulp.dest('_site/css/'))
         .pipe(browserSync.reload({stream:true}));
 });
 
@@ -54,11 +57,23 @@ gulp.task('compileSass', function () {
  * Concatenate js files
  */
  gulp.task('concatScripts', function() {
-    gulp.src('_js/picturefill.js')
+    gulp.src([
+            '_js/picturefill.js'
+        ])
         .pipe(concat('scripts.js'))
         .pipe(gulp.dest('js'))
-        .pipe(gulp.dest('_site/js'))
+        //.pipe(gulp.dest('_site/js'))
         .pipe(browserSync.reload({stream:true}));
+ });
+
+ /**
+ * Minify and rename concatenated js file
+ */
+ gulp.task('minifyScripts', function() {
+    gulp.src('js/scripts.js')
+        .pipe(uglify())
+        .pipe(rename('scripts.min.js'))
+        .pipe(gulp.dest('js'));
  });
 
 /**
