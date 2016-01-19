@@ -5,6 +5,8 @@ var browserSync = require('browser-sync');
 var sass        = require ('gulp-ruby-sass');
 var cp          = require('child_process');
 var concat      = require('gulp-concat');
+var imagemin    = require('gulp-imagemin');
+//var pngquant    = require('imagemin-pngquant');
 
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -72,6 +74,14 @@ gulp.task('watch', function () {
 
 /**
  * Default task, running just `gulp` will compile the sass, concatenate js files,
- * compile the jekyll site, launch BrowserSync, and watch files.
+ * compile the jekyll site, launch BrowserSync, watch files, and minify images.
  */
-gulp.task('default', ['browser-sync', 'watch']);
+gulp.task('default', ['browser-sync', 'watch'], function() {
+    return gulp.src('assets/images/*')
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            //use: [pngquant()]
+        }))
+        .pipe(gulp.dest('_site/assets/images'));
+});
