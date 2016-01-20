@@ -3,13 +3,13 @@
 var gulp        = require('gulp'),
     browserSync = require('browser-sync'),
     cp          = require('child_process'),
-    sass        = require('gulp-ruby-sass'),
+    sass        = require('gulp-sass'),
     maps        = require('gulp-sourcemaps'),
     concat      = require('gulp-concat'),
     uglify      = require('gulp-uglify'),
     imagemin    = require('gulp-imagemin'),
-    rename      = require('gulp-rename');
-//var pngquant    = require('imagemin-pngquant');
+    rename      = require('gulp-rename'),
+    pngquant    = require('imagemin-pngquant');
 
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -45,11 +45,13 @@ gulp.task('browser-sync', ['jekyll-build', 'compileSass', 'concatScripts', 'mini
 /**
  * Compile scss files and create a source map
  */
-gulp.task('compileSass', function () {
+gulp.task('compileSass', function() {
     gulp.src('_sass/main.scss')
-        //.on('error', browserSync.notify)
+        .on('error', browserSync.notify)
+        .pipe(maps.init())
+        .pipe(sass())
+        .pipe(maps.write('./'))
         .pipe(gulp.dest('css'))
-        //.pipe(gulp.dest('_site/css/'))
         .pipe(browserSync.reload({stream:true}));
 });
 
@@ -58,11 +60,10 @@ gulp.task('compileSass', function () {
  */
  gulp.task('concatScripts', function() {
     gulp.src([
-            '_js/picturefill.js'
+            'js/picturefill.js'
         ])
         .pipe(concat('scripts.js'))
         .pipe(gulp.dest('js'))
-        //.pipe(gulp.dest('_site/js'))
         .pipe(browserSync.reload({stream:true}));
  });
 
@@ -73,7 +74,8 @@ gulp.task('compileSass', function () {
     gulp.src('js/scripts.js')
         .pipe(uglify())
         .pipe(rename('scripts.min.js'))
-        .pipe(gulp.dest('js'));
+        .pipe(gulp.dest('js'))
+        .pipe(browserSync.reload({stream:true}));
  });
 
 /**
@@ -83,7 +85,7 @@ gulp.task('compileSass', function () {
  */
 gulp.task('watch', function () {
     gulp.watch(['_sass/libraries/bourbon/*.scss', '_sass/libraries/neat/*.scss', '_sass/libraries/base/*.scss', '_sass/*.scss'], ['compileSass']);
-    gulp.watch('_js/*.js', ['concatScripts', 'jekyll-rebuild']);
+    gulp.watch('js/*.js', ['concatScripts'], ['minifyScripts']);
     gulp.watch(['*.html', '_includes/*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
 });
 
@@ -96,7 +98,7 @@ gulp.task('default', ['browser-sync', 'watch'], function() {
         .pipe(imagemin({
             progressive: true,
             svgoPlugins: [{removeViewBox: false}],
-            //use: [pngquant()]
+            use: [pngquant()]
         }))
         .pipe(gulp.dest('_site/assets/images'));
 });
