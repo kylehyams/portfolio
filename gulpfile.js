@@ -7,8 +7,8 @@ var gulp        = require('gulp'),
     maps        = require('gulp-sourcemaps'),
     concat      = require('gulp-concat'),
     uglify      = require('gulp-uglify'),
-    imagemin    = require('gulp-imagemin'),
     rename      = require('gulp-rename'),
+    imagemin    = require('gulp-imagemin'),
     pngquant    = require('imagemin-pngquant');
 
 var messages = {
@@ -60,7 +60,7 @@ gulp.task('compileSass', function() {
  */
  gulp.task('concatScripts', function() {
     gulp.src([
-            'js/picturefill.js'
+            '_js/picturefill.js'
         ])
         .pipe(concat('scripts.js'))
         .pipe(gulp.dest('js'))
@@ -85,7 +85,7 @@ gulp.task('compileSass', function() {
  */
 gulp.task('watch', function () {
     gulp.watch(['_sass/libraries/bourbon/*.scss', '_sass/libraries/neat/*.scss', '_sass/libraries/base/*.scss', '_sass/*.scss'], ['compileSass']);
-    gulp.watch('js/*.js', ['concatScripts'], ['minifyScripts']);
+    gulp.watch('_js/*.js', ['concatScripts', 'minifyScripts']);
     gulp.watch(['*.html', '_includes/*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
 });
 
