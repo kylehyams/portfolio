@@ -34,7 +34,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 /**
  * Wait for jekyll-build, then launch the Server
  */
-gulp.task('browser-sync', ['jekyll-build', 'compileSass', 'concatScripts', 'minifyScripts'], function() {
+gulp.task('browser-sync', ['compileSass', 'concatScripts', 'minifyScripts', 'jekyll-build'], function() {
     browserSync({
         server: {
             baseDir: '_site'
@@ -84,8 +84,8 @@ gulp.task('compileSass', function() {
  * Watch html/md files, run jekyll & reload BrowserSync
  */
 gulp.task('watch', function () {
-    gulp.watch(['_sass/libraries/bourbon/*.scss', '_sass/libraries/neat/*.scss', '_sass/libraries/base/*.scss', '_sass/*.scss'], ['compileSass']);
-    gulp.watch('_js/*.js', ['concatScripts', 'minifyScripts']);
+    gulp.watch(['_sass/libraries/bourbon/*.scss', '_sass/libraries/neat/*.scss', '_sass/libraries/base/*.scss', '_sass/*.scss'], ['compileSass', 'jekyll-rebuild']);
+    gulp.watch('_js/*.js', ['concatScripts', 'minifyScripts', 'jekyll-rebuild']);
     gulp.watch(['*.html', '_includes/*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
 });
 
