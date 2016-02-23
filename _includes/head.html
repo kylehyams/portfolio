@@ -3,13 +3,29 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<!-- Open Graph content -->
+	<meta property="og:title" content="Kyle Hyams | Designer" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://kylehya.ms" />
+	<meta property="og:image" content="http://kylehyams.com/assets/images/open_graph_image.jpg" />
+	<meta property="og:description" content="Designer and animator at Purple, Rock, Scissors. Former athlete. Forever a work in progress." />
+
+	<!-- Twitter card content -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@kylehyams">
+	<meta name="twitter:creator" content="@kylehyams">
+	<meta name="twitter:title" content="Kyle Hyams | Designer">
+	<meta name="twitter:description" content="Designer and animator at Purple, Rock, Scissors. Former athlete. Forever a work in progress.">
+	<meta name="twitter:image" content="http://kylehyams.com/assets/images/twitter_card.jpg">
+
 	<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
 	<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 	<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
-	<!-- Load all the faviconz -->
+	
+	<!-- Favicons -->
 	<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
