@@ -114,22 +114,3 @@ gulp.task('default', ['browser-sync', 'watch'], function() {
         }))
         .pipe(gulp.dest('_site/assets/images'));
 });
-
- /**
- * Deployment task
- */
-gulp.task('deployProduction',['compileSass', 'concatScripts', 'minifyScripts', 'jekyll-build'], function() {
-    rsync({
-        ssh: true,
-        src: '_site/',
-        dest: 'khyams@72.29.72.224:/var/www/kylehyams.com/',
-        recursive: true,
-        exclude: ignoreList,
-        progress: true,
-        args: ['--progress', '--verbose', '--compress', '--human-readable'],
-        dryRun: false
-    }, function(error, stdout, stderr, cmd) {
-        console.log('what happened', error, stdout, stderr, cmd);
-        gutil.log(stdout);
-    });
-});
