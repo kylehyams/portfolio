@@ -9,7 +9,19 @@ var gulp        = require('gulp'),
     uglify      = require('gulp-uglify'),
     rename      = require('gulp-rename'),
     imagemin    = require('gulp-imagemin'),
-    pngquant    = require('imagemin-pngquant');
+    pngquant    = require('imagemin-pngquant')
+    rsync       = require('rsyncwrapper').rsync;
+
+var ignoreList = [
+    '_site/node_modules',
+    '_site/gulpfile.js',
+    '_site/package.json'
+];
+
+function handleError(err) {
+  console.log(err.toString());
+  this.emit('end');
+}
 
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -101,4 +113,23 @@ gulp.task('default', ['browser-sync', 'watch'], function() {
             use: [pngquant()]
         }))
         .pipe(gulp.dest('_site/assets/images'));
+});
+
+ /**
+ * Deployment task
+ */
+gulp.task('deployStaging',['compileSass', 'concatScripts', 'jekyll-build'], function() {
+    rsync({
+        ssh: true,
+        src: '_site/',
+        dest: 'kylehyams@72.29.72.224:/var/www/kylehyams.com/',
+        recursive: true,
+        exclude: ignoreList,
+        progress: true,
+        args: ['--progress', '--verbose', '--compress', '--human-readable'],
+        dryRun: false
+    }, function(error, stdout, stderr, cmd) {
+        console.log('what happened', error, stdout, stderr, cmd);
+        gutil.log(stdout);
+    });
 });
