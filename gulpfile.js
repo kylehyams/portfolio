@@ -122,7 +122,7 @@ gulp.task('deployProduction',['compileSass', 'concatScripts', 'minifyScripts', '
     rsync({
         ssh: true,
         src: '_site/',
-        dest: 'kylehyams@72.29.72.224:/var/www/kylehyams.com/',
+        dest: 'khyams@72.29.72.224:/var/www/kylehyams.com/',
         recursive: true,
         exclude: ignoreList,
         progress: true,
