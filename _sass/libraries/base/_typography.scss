@@ -5,10 +5,13 @@ html {
 
 body {
   color: $base-font-color;
-  font-family: $base-font-family;
+  font-family: $work-sans-fallback;
   font-feature-settings: "kern", "liga", "pnum";
   font-size: $base-font-size;
   line-height: $base-line-height;
+  .wf-active & {
+    font-family: $base-font-family;
+  }
 }
 
 h1,
@@ -16,11 +19,17 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: $heading-font-family;
+  font-family: $dala-floda-fallback;
+  font-weight: 900;
   font-size: $base-font-size;
   @include font-feature-settings("kern");
-  line-height: $heading-line-height;
+  line-height: 1;
   // margin: 0 0 $small-spacing;
+  .wf-active & {
+    font-family: $heading-font-family;
+    font-weight: inherit;
+    line-height: $heading-line-height;
+  }
 }
 
 h1 {
@@ -123,11 +132,14 @@ h5 {
 
 h6 {
   color: $action-color;
-  font-family: $base-font-family;
+  font-family: $work-sans-fallback;
   letter-spacing: 0.3rem;
   text-transform: uppercase;
   margin: 0;
   // margin: 0 0 $small-spacing;
+  .wf-active & {
+    font-family: $base-font-family;
+  }
   @media screen and (min-width: 768px) {
     font-size: 1.2rem;
     letter-spacing: 0.36rem;

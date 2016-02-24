@@ -114,7 +114,8 @@ body {
 			
 			&:before {
 				color: $salmon;
-				font-family: $heading-font-family;
+				font-family: $dala-floda-fallback;
+				font-weight: 900;
 				font-size: 10.2rem;
 				letter-spacing: -0.2rem;
 				@include font-feature-settings("pnum");
@@ -122,6 +123,10 @@ body {
 				position: absolute;
 				top: -60px;
 				left: -21px;
+				.wf-active & {
+					font-family: $heading-font-family;
+					font-weight: inherit;
+				}
 				@include media($medium-screen) {
 					font-size: 13.8rem;
 					top: -87px;
