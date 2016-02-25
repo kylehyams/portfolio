@@ -12,6 +12,8 @@ var gulp        = require('gulp'),
     pngquant    = require('imagemin-pngquant')
     rsync       = require('rsyncwrapper').rsync;
 
+var secrets = require('./secrets.json');
+
 var ignoreList = [
     '_site/node_modules',
     '_site/gulpfile.js',
@@ -113,4 +115,23 @@ gulp.task('default', ['browser-sync', 'watch'], function() {
             use: [pngquant()]
         }))
         .pipe(gulp.dest('_site/assets/images'));
+});
+
+ /**
+ * Deployment task
+ */
+gulp.task('deployProduction',['compileSass', 'concatScripts', 'minifyScripts', 'jekyll-build'], function() {
+    rsync({
+        ssh: true,
+        src: '_site/',
+        dest: secrets.servers.dev.rsyncDest,
+        recursive: true,
+        exclude: ignoreList,
+        progress: true,
+        args: ['--progress', '--verbose', '--compress', '--human-readable'],
+        dryRun: false
+    }, function(error, stdout, stderr, cmd) {
+        console.log('what happened', error, stdout, stderr, cmd);
+        gutil.log(stdout);
+    });
 });
