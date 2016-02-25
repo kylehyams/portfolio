@@ -120,7 +120,7 @@ gulp.task('default', ['browser-sync', 'watch'], function() {
  /**
  * Deployment task
  */
-gulp.task('deployProduction',['compileSass', 'concatScripts', 'minifyScripts', 'jekyll-build'], function() {
+gulp.task('deploy',['compileSass', 'concatScripts', 'minifyScripts', 'jekyll-build'], function() {
     rsync({
         ssh: true,
         src: '_site/',
