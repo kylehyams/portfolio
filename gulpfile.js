@@ -9,7 +9,7 @@ var gulp        = require('gulp'),
     uglify      = require('gulp-uglify'),
     rename      = require('gulp-rename'),
     imagemin    = require('gulp-imagemin'),
-    pngquant    = require('imagemin-pngquant')
+    pngquant    = require('imagemin-pngquant'),
     rsync       = require('rsyncwrapper').rsync;
 
 var secrets = require('./secrets.json');
@@ -123,7 +123,7 @@ gulp.task('default', ['browser-sync', 'watch'], function() {
 gulp.task('deploy',['compileSass', 'concatScripts', 'minifyScripts', 'jekyll-build'], function() {
     rsync({
         ssh: true,
-        src: '_site/',
+        src: './_site/',
         dest: secrets.servers.dev.rsyncDest,
         recursive: true,
         exclude: ignoreList,
