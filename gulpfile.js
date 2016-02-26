@@ -11,8 +11,7 @@ var gulp        = require('gulp'),
     imagemin    = require('gulp-imagemin'),
     pngquant    = require('imagemin-pngquant'),
     rsync       = require('rsyncwrapper').rsync;
-
-var secrets = require('./secrets.json');
+    // secrets     = require('./secrets.json');
 
 var ignoreList = [
     '_site/node_modules',
