@@ -2,6 +2,3 @@ _site
 .sass-cache
 .jekyll-metadata
 assets/fonts
-css
-js
-secrets.json
