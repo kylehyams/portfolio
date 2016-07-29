@@ -9,6 +9,7 @@ body {
   font-feature-settings: "kern", "liga", "pnum";
   font-size: $base-font-size;
   line-height: $base-line-height;
+  -webkit-font-smoothing: antialiased;
   .wf-active & {
     font-family: $base-font-family;
   }
@@ -34,10 +35,11 @@ h5 {
 
 h1 {
   color: $action-color;
-  font-size: 8rem;
-  letter-spacing: 0.15rem;
-  text-shadow: 0 5px 10px rgba($olive-darker, 0.25);
-  margin: 0 0 3rem 0;
+  font-size: 3.6rem;
+  line-height: 40px !important;
+  letter-spacing: 1.25px;
+  text-shadow: 0 4px 6px rgba($olive-darker, 0.2);
+  margin: 0 0 22px 0;
   position: relative;
   @media screen and (min-width: 768px) {
     font-size: 9.6rem;
@@ -148,17 +150,12 @@ h6 {
     font-size: 1.4rem;
     letter-spacing: 0.45rem;
   }
-  @media screen and (min-width: 1024px) {
-    @include hidpi(2) {
-        font-weight: 300;
-    }
-  }
 }
 
 p {
   // margin: 0 0 $small-spacing;
   font-weight: 400;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.5px;
   margin: 0 0 2rem 0;
   @media screen and (min-width: 768px) {
     font-size: 1.8rem;
@@ -166,9 +163,6 @@ p {
   }
   @media screen and (min-width: 1024px) {
     font-size: 2rem;
-    @include hidpi(2) {
-        font-weight: 300;
-    }
   }
   @media screen and (min-width: 1440px) {
     font-size: 2.2rem;
@@ -176,8 +170,11 @@ p {
   
   &.about {
     color: $creme;
-    font-size: 1.8rem;
-    line-height: 2.8rem;
+    font-size: $base-font-size;
+    line-height: 2.4rem;
+    border-left: solid 1px $salmon;
+    margin: 0;
+    padding: 0 0 0 16px;
     @media screen and (min-width: 1024px) {
       font-size: 2rem;
     }
@@ -208,11 +205,6 @@ p {
       letter-spacing: 0.125rem;
       margin: 6rem 0;
     }
-    @media screen and (min-width: 1024px) {
-      @include hidpi(2) {
-          font-weight: 400;
-      }
-    }
     @media screen and (min-width: 1440px) {
       font-size: 2.2rem;
     }
@@ -229,11 +221,6 @@ p {
     @media screen and (min-width: 1024px) {
       font-size: 2rem;
       line-height: 2.8rem;
-    }
-    @media screen and (min-width: 1024px) {
-      @include hidpi(2) {
-          font-weight: 400;
-      }
     }
     @media screen and (min-width: 1440px) {
       font-size: 2.2rem;

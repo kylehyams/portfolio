@@ -5,7 +5,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url(https://fonts.googleapis.com/css?family=Work+Sans:300,400,500|Playfair+Display:900);
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,500|Playfair+Display:900);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -117,7 +117,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
       width: 22rem;
       margin: 6.5rem 0 0 0; } }
   .button:hover {
-    color: #fffff5;
+    color: #fffffa;
     background: #dc7a6e;
     -webkit-transform: scale(0.98);
     -moz-transform: scale(0.98);
@@ -173,7 +173,7 @@ label {
 
 input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], input:not([type]), textarea,
 select[multiple=multiple] {
-  background-color: #fffff5;
+  background-color: #fffffa;
   border: 1px solid #5b7366;
   border-radius: 4rem;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
@@ -194,7 +194,7 @@ select[multiple=multiple] {
     outline: none; }
   input[type="color"]:disabled, input[type="date"]:disabled, input[type="datetime"]:disabled, input[type="datetime-local"]:disabled, input[type="email"]:disabled, input[type="month"]:disabled, input[type="number"]:disabled, input[type="password"]:disabled, input[type="search"]:disabled, input[type="tel"]:disabled, input[type="text"]:disabled, input[type="time"]:disabled, input[type="url"]:disabled, input[type="week"]:disabled, input:not([type]):disabled, textarea:disabled,
   select[multiple=multiple]:disabled {
-    background-color: #f2f2e9;
+    background-color: #f2f2ee;
     cursor: not-allowed; }
     input[type="color"]:disabled:hover, input[type="date"]:disabled:hover, input[type="datetime"]:disabled:hover, input[type="datetime-local"]:disabled:hover, input[type="email"]:disabled:hover, input[type="month"]:disabled:hover, input[type="number"]:disabled:hover, input[type="password"]:disabled:hover, input[type="search"]:disabled:hover, input[type="tel"]:disabled:hover, input[type="text"]:disabled:hover, input[type="time"]:disabled:hover, input[type="url"]:disabled:hover, input[type="week"]:disabled:hover, input:not([type]):disabled:hover, textarea:disabled:hover,
     select[multiple=multiple]:disabled:hover {
@@ -267,7 +267,8 @@ body {
   font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-feature-settings: "kern", "liga", "pnum";
   font-size: 1.6rem;
-  line-height: 1.5; }
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased; }
   .wf-active body {
     font-family: "Work Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif; }
 
@@ -295,10 +296,11 @@ h5 {
 
 h1 {
   color: #dc7a6e;
-  font-size: 8rem;
-  letter-spacing: 0.15rem;
-  text-shadow: 0 5px 10px rgba(13, 27, 23, 0.25);
-  margin: 0 0 3rem 0;
+  font-size: 3.6rem;
+  line-height: 40px !important;
+  letter-spacing: 1.25px;
+  text-shadow: 0 4px 6px rgba(13, 27, 23, 0.2);
+  margin: 0 0 22px 0;
   position: relative; }
   @media screen and (min-width: 768px) {
     h1 {
@@ -401,13 +403,9 @@ h6 {
       font-size: 1.4rem;
       letter-spacing: 0.45rem; } }
 
-@media only screen and (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 1024px) and (min--moz-device-pixel-ratio: 2), only screen and (min-width: 1024px) and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-width: 1024px) and (min-resolution: 192dpi), only screen and (min-width: 1024px) and (min-resolution: 2dppx) {
-  h6 {
-    font-weight: 300; } }
-
 p {
   font-weight: 400;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.5px;
   margin: 0 0 2rem 0; }
   @media screen and (min-width: 768px) {
     p {
@@ -416,16 +414,16 @@ p {
   @media screen and (min-width: 1024px) {
     p {
       font-size: 2rem; } }
-  @media only screen and (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 1024px) and (min--moz-device-pixel-ratio: 2), only screen and (min-width: 1024px) and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-width: 1024px) and (min-resolution: 192dpi), only screen and (min-width: 1024px) and (min-resolution: 2dppx) {
-    p {
-      font-weight: 300; } }
   @media screen and (min-width: 1440px) {
     p {
       font-size: 2.2rem; } }
   p.about {
-    color: #fffff5;
-    font-size: 1.8rem;
-    line-height: 2.8rem; }
+    color: #fffffa;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    border-left: solid 1px #dc7a6e;
+    margin: 0;
+    padding: 0 0 0 16px; }
     @media screen and (min-width: 1024px) {
       p.about {
         font-size: 2rem; } }
@@ -450,15 +448,11 @@ p {
         font-size: 2rem;
         letter-spacing: 0.125rem;
         margin: 6rem 0; } }
-
-@media only screen and (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 1024px) and (min--moz-device-pixel-ratio: 2), only screen and (min-width: 1024px) and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-width: 1024px) and (min-resolution: 192dpi), only screen and (min-width: 1024px) and (min-resolution: 2dppx) {
-  p.featured__intro {
-    font-weight: 400; } }
     @media screen and (min-width: 1440px) {
       p.featured__intro {
         font-size: 2.2rem; } }
   p.conclusion__copy {
-    color: #fffff5;
+    color: #fffffa;
     font-weight: 500;
     line-height: 2.4rem; }
     @media screen and (min-width: 768px) {
@@ -469,17 +463,13 @@ p {
       p.conclusion__copy {
         font-size: 2rem;
         line-height: 2.8rem; } }
-
-@media only screen and (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 1024px) and (min--moz-device-pixel-ratio: 2), only screen and (min-width: 1024px) and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-width: 1024px) and (min-resolution: 192dpi), only screen and (min-width: 1024px) and (min-resolution: 2dppx) {
-  p.conclusion__copy {
-    font-weight: 400; } }
     @media screen and (min-width: 1440px) {
       p.conclusion__copy {
         font-size: 2.2rem;
         line-height: 3.4rem;
         letter-spacing: 0.05rem; } }
   p.footer__copy {
-    color: #fffff5; }
+    color: #fffffa; }
     @media screen and (min-width: 768px) {
       p.footer__copy {
         margin: 0.5rem 0 0 0; } }
@@ -682,34 +672,73 @@ header {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  background: #5b7366 url("../assets/images/topographic_pattern.svg") 0 0 repeat;
+  background: url("../assets/images/wood_background.jpg") no-repeat #5b7366;
+  background-size: cover;
   position: relative; }
   header::after {
     clear: both;
     content: "";
     display: table; }
+  header .logo {
+    width: 42px;
+    height: auto;
+    opacity: 1;
+    position: absolute;
+    top: 16px;
+    left: 27px; }
+    @media screen and (min-width: 768px) {
+      header .logo {
+        width: 6rem;
+        top: -28px;
+        left: -33px; } }
+    @media screen and (min-width: 1024px) {
+      header .logo {
+        width: 6.5rem;
+        top: -30px;
+        left: -37px; } }
+    @media screen and (min-width: 1440px) {
+      header .logo {
+        width: 7.5rem;
+        top: -34px;
+        left: -40px; } }
   header .header__container {
     float: left;
     display: block;
     margin-right: 0%;
     width: 100%;
-    padding: 6rem 0;
-    background-color: rgba(91, 115, 102, 0);
-    background-image: -webkit-linear-gradient(top, rgba(91, 115, 102, 0), #44574d);
-    background-image: linear-gradient(to bottom,rgba(91, 115, 102, 0), #44574d); }
+    height: 100vh;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center; }
     header .header__container:last-child {
       margin-right: 0; }
     @media screen and (min-width: 768px) {
       header .header__container {
         height: 40rem;
         padding: 0;
-        display: -webkit-box;
-        display: -moz-box;
-        display: box;
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flexbox;
-        display: flex;
         -webkit-box-orient: horizontal;
         -moz-box-orient: horizontal;
         box-orient: horizontal;
@@ -762,28 +791,6 @@ header {
           width: 33.33333%; }
           header .header__container aside:last-child {
             margin-right: 0; } }
-      header .header__container aside .logo {
-        width: 4.5rem;
-        height: auto;
-        opacity: 0.5;
-        position: absolute;
-        top: -21px;
-        left: -18px; }
-        @media screen and (min-width: 768px) {
-          header .header__container aside .logo {
-            width: 6rem;
-            top: -28px;
-            left: -33px; } }
-        @media screen and (min-width: 1024px) {
-          header .header__container aside .logo {
-            width: 6.5rem;
-            top: -30px;
-            left: -37px; } }
-        @media screen and (min-width: 1440px) {
-          header .header__container aside .logo {
-            width: 7.5rem;
-            top: -34px;
-            left: -40px; } }
     header .header__container article {
       float: left;
       display: block;
@@ -823,7 +830,7 @@ header {
             margin-right: 0; } }
 
 body {
-  background: #fffff5; }
+  background: #fffffa; }
 
 .page-content {
   background: url("../assets/images/topography_01.svg") no-repeat;

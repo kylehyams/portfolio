@@ -7,11 +7,7 @@ var gulp        = require('gulp'),
     maps        = require('gulp-sourcemaps'),
     concat      = require('gulp-concat'),
     uglify      = require('gulp-uglify'),
-    rename      = require('gulp-rename')
-    // imagemin    = require('gulp-imagemin'),
-    //pngquant    = require('imagemin-pngquant'),
-    // rsync       = require('rsyncwrapper').rsync;
-    // secrets     = require('./secrets.json');
+    rename      = require('gulp-rename');
 
 var ignoreList = [
     '_site/node_modules',
@@ -104,33 +100,8 @@ gulp.task('watch', function () {
 
 /**
  * Default task, running just `gulp` will compile the sass, concatenate js files,
- * compile the jekyll site, launch BrowserSync, watch files, and minify images.
+ * compile the jekyll site, launch BrowserSync, and watch files.
  */
 gulp.task('default', ['browser-sync', 'watch'], function() {
-    // return gulp.src('assets/images/*')
-    //     .pipe(imagemin({
-    //         progressive: true,
-    //         svgoPlugins: [{removeViewBox: false}],
-    //         use: [pngquant()]
-    //     }))
-    //     .pipe(gulp.dest('_site/assets/images'));
-});
 
- /**
- * Deployment task
- */
-// gulp.task('deploy',['compileSass', 'concatScripts', 'minifyScripts', 'jekyll-build'], function() {
-//     rsync({
-//         ssh: true,
-//         src: './_site/',
-//         dest: secrets.servers.dev.rsyncDest,
-//         recursive: true,
-//         exclude: ignoreList,
-//         progress: true,
-//         args: ['--progress', '--verbose', '--compress', '--human-readable'],
-//         dryRun: false
-//     }, function(error, stdout, stderr, cmd) {
-//         console.log('what happened', error, stdout, stderr, cmd);
-//         gutil.log(stdout);
-//     });
-// });
+});

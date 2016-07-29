@@ -1,16 +1,46 @@
 header {
 	@include outer-container;
-	background: $olive url('../assets/images/topographic_pattern.svg') 0 0 repeat;;
+	background: url('../assets/images/wood_background.jpg') no-repeat $olive;
+	background-size: cover;
+	// background: $olive url('../assets/images/topographic_pattern.svg') 0 0 repeat;
 	position: relative;
 	
+	.logo {
+		width: 42px;
+		height: auto;
+		opacity: 1;
+		position: absolute;
+		top: 16px;
+		left: 27px;
+		@include media($medium-screen) {
+			width: 6rem;
+			top: -28px;
+			left: -33px;
+		}
+		@include media($large-screen) {
+			width: 6.5rem;
+			top: -30px;
+			left: -37px; 
+		}
+		@include media($xlarge-screen) {
+			width: 7.5rem;
+			top: -34px;
+			left: -40px;
+		}
+	}
+
 	.header__container {
 		@include span-columns(12);
-		padding: 6rem 0;
-		@include linear-gradient(to bottom, rgba($olive, 0), darken($olive, 10%));
+		height: 100vh;
+		@include display(flex);
+		@include flex-direction(column);
+		@include justify-content(center);
+		// padding: 6rem 0;
+		// @include linear-gradient(to bottom, rgba($olive, 0), darken($olive, 10%));
 		@include media($medium-screen) {
 			height: 40rem;
 			padding: 0;
-			@include display(flex);
+			// @include display(flex);
 			@include flex-direction(row);
 			@include align-items(center);
 		}
@@ -33,31 +63,6 @@ header {
 			@include media($large-screen) {
 				@include span-columns(4);
 			}
-			
-			.logo {
-				width: 4.5rem;
-				height: auto;
-				opacity: 0.5;
-				position: absolute;
-				top: -21px;
-				left: -18px;
-				@include media($medium-screen) {
-					width: 6rem;
-					top: -28px;
-					left: -33px;
-				}
-				@include media($large-screen) {
-					width: 6.5rem;
-					top: -30px;
-					left: -37px; 
-				}
-				@include media($xlarge-screen) {
-					width: 7.5rem;
-					top: -34px;
-					left: -40px;
-				}
-			}
-			
 		}
 
 		article {
