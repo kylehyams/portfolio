@@ -17,3 +17,8 @@ github_username:  kylehyams
 
 # Build settings
 markdown: kramdown
+exclude:
+  - gulpfile.js
+  - node_modules
+  - package.json
+  - README.md
