@@ -437,6 +437,15 @@ p {
       text-decoration: none; }
       p.about a:hover {
         color: #d25445; }
+  p.anchor {
+    font-size: 4.8rem;
+    line-height: 48px;
+    text-align: center;
+    margin: 32px 0 0; }
+    p.anchor a {
+      color: #0d1b17;
+      font-weight: normal;
+      text-decoration: none; }
   p.featured__intro {
     font-weight: 500;
     margin: 3rem 0; }
