@@ -283,8 +283,7 @@ h5 {
   -webkit-font-feature-settings: "kern";
   -moz-font-feature-settings: "kern";
   -ms-font-feature-settings: "kern";
-  font-feature-settings: "kern";
-  line-height: 1; }
+  font-feature-settings: "kern"; }
   .wf-active h1, .wf-active
   h2, .wf-active
   h3, .wf-active
@@ -300,19 +299,24 @@ h1 {
   line-height: 40px !important;
   letter-spacing: 1.25px;
   text-shadow: 0 4px 6px rgba(13, 27, 23, 0.2);
-  margin: 0 0 22px 0;
+  margin: 0 0 22px;
   position: relative; }
   @media screen and (min-width: 768px) {
     h1 {
-      font-size: 9.6rem;
-      letter-spacing: 0.25rem;
-      margin: 0; } }
+      font-size: 6.4rem;
+      letter-spacing: 1.5px;
+      line-height: 80px !important;
+      margin: 0 0 64px; } }
   @media screen and (min-width: 1024px) {
     h1 {
-      font-size: 10.8rem; } }
+      font-size: 8.8rem;
+      line-height: 104px !important;
+      margin: 0 0 40px; } }
   @media screen and (min-width: 1440px) {
     h1 {
-      font-size: 13.8rem; } }
+      font-size: 10.4rem;
+      line-height: 120px !important;
+      margin: 0 0 96px 0; } }
 
 h2 {
   color: #263430;
@@ -424,13 +428,15 @@ p {
     border-left: solid 1px #dc7a6e;
     margin: 0;
     padding: 0 0 0 16px; }
-    @media screen and (min-width: 1024px) {
-      p.about {
-        font-size: 2rem; } }
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: 768px) {
       p.about {
         font-size: 2.4rem;
-        line-height: 3.4rem; } }
+        line-height: 36px;
+        padding: 0 0 0 23px; } }
+    @media screen and (min-width: 1024px) {
+      p.about {
+        font-size: 2.4rem;
+        line-height: 40px !important; } }
     p.about a {
       color: #dc7a6e;
       text-shadow: 0 3px 6px rgba(13, 27, 23, 0.25);
@@ -490,12 +496,20 @@ p {
       p.footer__copy {
         font-size: 2rem; } }
   p.footer__colophon {
-    font-size: 1.4rem;
-    line-height: 1.75;
-    margin: 0; }
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+    margin: 0 0 12px; }
+    p.footer__colophon:last-child {
+      margin: 0; }
+    @media screen and (min-width: 768px) {
+      p.footer__colophon {
+        font-size: 1.6rem;
+        line-height: 24px; } }
     @media screen and (min-width: 1440px) {
       p.footer__colophon {
-        font-size: 1.6rem; } }
+        font-size: 1.4rem;
+        letter-spacing: 22px; } }
     p.footer__colophon a {
       color: #5b7366;
       text-decoration: underline; }
@@ -681,7 +695,7 @@ header {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  background: url("../assets/images/wood_background.jpg") no-repeat #5b7366;
+  background: url("../assets/images/wood_background_xlarge.jpg") no-repeat #5b7366;
   background-size: cover;
   position: relative; }
   header::after {
@@ -697,25 +711,20 @@ header {
     left: 27px; }
     @media screen and (min-width: 768px) {
       header .logo {
-        width: 6rem;
-        top: -28px;
-        left: -33px; } }
+        top: 40px;
+        left: 40px; } }
     @media screen and (min-width: 1024px) {
       header .logo {
-        width: 6.5rem;
-        top: -30px;
-        left: -37px; } }
+        left: 64px; } }
     @media screen and (min-width: 1440px) {
       header .logo {
-        width: 7.5rem;
-        top: -34px;
-        left: -40px; } }
+        left: 80px; } }
   header .header__container {
     float: left;
     display: block;
     margin-right: 0%;
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     display: -webkit-box;
     display: -moz-box;
     display: box;
@@ -746,33 +755,11 @@ header {
       margin-right: 0; }
     @media screen and (min-width: 768px) {
       header .header__container {
-        height: 40rem;
-        padding: 0;
-        -webkit-box-orient: horizontal;
-        -moz-box-orient: horizontal;
-        box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -moz-box-direction: normal;
-        box-direction: normal;
-        -webkit-flex-direction: row;
-        -moz-flex-direction: row;
-        flex-direction: row;
-        -ms-flex-direction: row;
-        -webkit-box-align: center;
-        -moz-box-align: center;
-        box-align: center;
-        -webkit-align-items: center;
-        -moz-align-items: center;
-        -ms-align-items: center;
-        -o-align-items: center;
-        align-items: center;
-        -ms-flex-align: center; } }
+        height: 90vh;
+        padding: 0; } }
     @media screen and (min-width: 1024px) {
       header .header__container {
-        height: 60rem; } }
-    @media screen and (min-width: 1440px) {
-      header .header__container {
-        height: 65rem; } }
+        height: 95vh; } }
     header .header__container aside {
       float: left;
       display: block;
@@ -782,22 +769,13 @@ header {
       position: relative; }
       header .header__container aside:last-child {
         margin-right: 0; }
-      @media screen and (min-width: 768px) {
-        header .header__container aside {
-          float: left;
-          display: block;
-          margin-right: 0%;
-          width: 41.66667%;
-          margin-left: 8.33333%;
-          padding: 0; }
-          header .header__container aside:last-child {
-            margin-right: 0; } }
       @media screen and (min-width: 1024px) {
         header .header__container aside {
           float: left;
           display: block;
           margin-right: 0%;
-          width: 33.33333%; }
+          width: 66.66667%;
+          margin-left: 16.66667%; }
           header .header__container aside:last-child {
             margin-right: 0; } }
     header .header__container article {
@@ -813,9 +791,8 @@ header {
           float: left;
           display: block;
           margin-right: 0%;
-          width: 41.66667%;
-          margin-left: 0%;
-          padding: 0 0 0 3.5rem; }
+          width: 58.33333%;
+          margin-left: 25%; }
           header .header__container article:last-child {
             margin-right: 0; } }
       @media screen and (min-width: 1024px) {
@@ -823,18 +800,8 @@ header {
           float: left;
           display: block;
           margin-right: 0%;
-          width: 50%;
-          padding: 0 0 0 5rem; }
-          header .header__container article:last-child {
-            margin-right: 0; } }
-      @media screen and (min-width: 1440px) {
-        header .header__container article {
-          float: left;
-          display: block;
-          margin-right: 0%;
-          width: 41.66667%;
-          margin-left: 8.33333%;
-          padding: 0; }
+          width: 33.33333%;
+          margin-left: 41.66667%; }
           header .header__container article:last-child {
             margin-right: 0; } }
 

@@ -1,8 +1,7 @@
 header {
 	@include outer-container;
-	background: url('../assets/images/wood_background.jpg') no-repeat $olive;
+	background: url('../assets/images/wood_background_xlarge.jpg') no-repeat $olive;
 	background-size: cover;
-	// background: $olive url('../assets/images/topographic_pattern.svg') 0 0 repeat;
 	position: relative;
 	
 	.logo {
@@ -13,55 +12,41 @@ header {
 		top: 16px;
 		left: 27px;
 		@include media($medium-screen) {
-			width: 6rem;
-			top: -28px;
-			left: -33px;
+			top: 40px;
+			left: 40px;
 		}
 		@include media($large-screen) {
-			width: 6.5rem;
-			top: -30px;
-			left: -37px; 
+			left: 64px; 
 		}
 		@include media($xlarge-screen) {
-			width: 7.5rem;
-			top: -34px;
-			left: -40px;
+			left: 80px;
 		}
 	}
 
 	.header__container {
 		@include span-columns(12);
-		height: 100vh;
+		height: 80vh;
 		@include display(flex);
 		@include flex-direction(column);
 		@include justify-content(center);
-		// padding: 6rem 0;
-		// @include linear-gradient(to bottom, rgba($olive, 0), darken($olive, 10%));
 		@include media($medium-screen) {
-			height: 40rem;
+			height: 90vh;
 			padding: 0;
-			// @include display(flex);
-			@include flex-direction(row);
-			@include align-items(center);
 		}
 		@include media($large-screen) {
-			height: 60rem;
+			height: 95vh;
 		}
 		@include media($xlarge-screen) {
-			height: 65rem;
+			// height: 65rem;
 		}
 		
 		aside {
 			@include span-columns(10);
 			@include shift(1);
 			position: relative;
-			@include media($medium-screen) {
-				@include span-columns(5);
-				@include shift(1);
-				padding: 0;
-			}
 			@include media($large-screen) {
-				@include span-columns(4);
+				@include span-columns(8);
+				@include shift(2);
 			}
 		}
 
@@ -69,18 +54,12 @@ header {
 			@include span-columns(10);
 			@include shift(1);
 			@include media($medium-screen) {
-				@include span-columns(5);
-				@include shift(0);
-				padding: 0 0 0 3.5rem;
+				@include span-columns(7);
+				@include shift(3);
 			}
 			@include media($large-screen) {
-				@include span-columns(6);
-				padding: 0 0 0 5rem;
-			}
-			@include media($xlarge-screen) {
-				@include span-columns(5);
-				@include shift(1);
-				padding: 0;
+				@include span-columns(4);
+				@include shift(5);
 			}
 		}
 
