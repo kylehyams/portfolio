@@ -22,3 +22,4 @@ exclude:
   - node_modules
   - package.json
   - README.md
+  - about.md # remove in the future!
