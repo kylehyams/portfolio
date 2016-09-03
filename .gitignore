@@ -2,3 +2,5 @@ _site
 .sass-cache
 .jekyll-metadata
 assets/fonts
+node_modules
+package.json
