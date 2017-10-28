@@ -22,4 +22,10 @@ exclude:
   - node_modules
   - package.json
   - README.md
-  - about.md # remove in the future!
+  - about.md # Remove in the future!
+
+# Portfolio settings
+collections:
+  portfolio:
+    output: true
+    permalink: /portfolio/:path/
