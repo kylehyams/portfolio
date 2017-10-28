@@ -1,66 +1,36 @@
+body {
+	background: $base-background-color;
+}
+
 header {
 	@include outer-container;
-	background: url('../assets/images/wood_background_xlarge.jpg') no-repeat $olive;
-	background-size: cover;
 	position: relative;
-	
-	.logo {
-		width: 42px;
-		height: auto;
-		opacity: 1;
-		position: absolute;
-		top: 16px;
-		left: 27px;
-		@include media($medium-screen) {
-			top: 40px;
-			left: 40px;
-		}
-		@include media($large-screen) {
-			left: 64px; 
-		}
-		@include media($xlarge-screen) {
-			left: 80px;
-		}
-	}
 
 	.header__container {
-		@include span-columns(12);
-		height: 80vh;
+		@include span-columns(10);
+		@include shift(1);
 		@include display(flex);
-		@include flex-direction(column);
-		@include justify-content(center);
-		@include media($medium-screen) {
-			height: 90vh;
-			padding: 0;
-		}
-		@include media($large-screen) {
-			height: 95vh;
-		}
-		@include media($xlarge-screen) {
-			// height: 65rem;
+		@include flex-direction(row);
+		@include align-items(center);
+		@include justify-content(space-between);
+		position: absolute;
+		z-index: 1;
+		top: 16px;
+		@include media($medium-screen) {}
+		@include media($large-screen) {}
+		@include media($xlarge-screen) {}
+		
+		.logo {
+			width: auto;
+			height: 42px;
+			@include media($medium-screen) {
+				height: 48px;
+			}
 		}
 		
-		aside {
-			@include span-columns(10);
-			@include shift(1);
-			position: relative;
-			@include media($large-screen) {
-				@include span-columns(8);
-				@include shift(2);
-			}
-		}
-
-		article {
-			@include span-columns(10);
-			@include shift(1);
-			@include media($medium-screen) {
-				@include span-columns(7);
-				@include shift(3);
-			}
-			@include media($large-screen) {
-				@include span-columns(4);
-				@include shift(5);
-			}
+		.icon-menu {
+			width: 30px;
+			height: auto;
 		}
 
 	}

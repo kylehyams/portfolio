@@ -2,8 +2,20 @@
 layout: default
 ---
 
-<div class="featured__copy">
+<!-- Hero -->
+<section class="hero home">
+	<div class="hero-content">
+		<h1><small>Web &amp; Brand Design</small></h1>
+		<h1>{{ site.title }}</h1>
+		<p>{{ site.description }}</p>
+	</div>
+</section>
+<!-- /Hero -->
+
+<!-- Work list -->
+<section class="featured__copy">
 	<div class="featured__copy--container">
+		
 		<!-- Loop through the portfolio -->
 		{% for portfolio in site.portfolio %}
 			<a href="{{ portfolio.url | prepend: site.baseurl }}">
@@ -12,5 +24,7 @@ layout: default
 			</a>
 		{% endfor %}
 		<!-- End loop -->
+		
 	</div>
-</div>
+</section>
+<!-- /Work list -->

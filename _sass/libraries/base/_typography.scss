@@ -1,18 +1,18 @@
 // Accurate font size conversion from design to development
 html {
-  font-size: 62.5%;
+	font-size: 62.5%;
 }
 
 body {
-  color: $base-font-color;
-  font-family: $work-sans-fallback;
-  font-feature-settings: "kern", "liga", "pnum";
-  font-size: $base-font-size;
-  line-height: $base-line-height;
-  -webkit-font-smoothing: antialiased;
-  .wf-active & {
-    font-family: $base-font-family;
-  }
+	color: $base-font-color;
+	font-family: $native-fallback;
+	font-feature-settings: "kern", "liga", "pnum";
+	font-size: $base-font-size;
+	line-height: $base-line-height;
+	-webkit-font-smoothing: antialiased;
+	.wf-active & {
+		font-family: $base-font-family;
+	}
 }
 
 h1,
@@ -20,43 +20,36 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: $dala-floda-fallback;
-  font-weight: 900;
-  font-size: $base-font-size;
-  @include font-feature-settings("kern");
-  // line-height: 1;
-  // margin: 0 0 $small-spacing;
-  .wf-active & {
-    font-family: $heading-font-family;
-    font-weight: inherit;
-    line-height: $heading-line-height;
-  }
+	color: $olive-dark;
+	font-family: $dala-floda-fallback;
+	font-weight: 900;
+	font-size: $base-font-size;
+	@include font-feature-settings("kern");
+	// line-height: 1;
+	// margin: 0 0 $small-spacing;
+	.wf-active & {
+		font-family: $heading-font-family;
+		font-weight: inherit;
+		line-height: $heading-line-height;
+	}
 }
 
 h1 {
-  color: $action-color;
-  font-size: 3.6rem;
-  line-height: 40px !important;
-  letter-spacing: 1.25px;
-  text-shadow: 0 4px 6px rgba($olive-darker, 0.2);
-  margin: 0 0 22px;
-  position: relative;
-  @media screen and (min-width: 768px) {
-    font-size: 6.4rem;
-    letter-spacing: 1.5px;
-    line-height: 80px !important;
-    margin: 0 0 64px;
-  }
-  @media screen and (min-width: 1024px) {
-    font-size: 8.8rem;
-    line-height: 104px !important;
-    margin: 0 0 40px;
-  }
-  @media screen and (min-width: 1440px) {
-    font-size: 10.4rem;
-    line-height: 120px !important;
-    margin: 0 0 96px 0;
-  }
+	font-size: 4rem;
+	line-height: $heading-line-height;
+	letter-spacing: 1.25px;
+	position: relative;
+	@media screen and (min-width: 768px) {}
+	@media screen and (min-width: 1024px) {}
+	@media screen and (min-width: 1440px) {}
+	small {
+		color: $base-font-color;
+		font-family: $work-sans;
+		font-size: 1.2rem;
+		line-height: 3;
+		letter-spacing: 4px;
+		text-transform: uppercase;
+	}
 }
 
 h2 {
@@ -160,7 +153,7 @@ h6 {
 p {
   // margin: 0 0 $small-spacing;
   font-weight: 400;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.25px;
   margin: 0 0 2rem 0;
   @media screen and (min-width: 768px) {
     font-size: 1.8rem;

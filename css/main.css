@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ---
 # Only the main Sass file needs front matter (the dashes are enough)
 --- */
@@ -5,6 +6,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("//hello.myfonts.net/count/35046d");
 @import url(https://fonts.googleapis.com/css?family=Work+Sans:400,500|Playfair+Display:900);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -49,10 +51,66 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+/**
+ * @license
+ * MyFonts Webfont Build ID 3474541, 2017-10-28T17:02:28-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Native-Italic by Fort Foundry
+ * URL: https://www.myfonts.com/fonts/fort-foundry/native/italic/
+ * 
+ * Webfont: Native-LightItalic by Fort Foundry
+ * URL: https://www.myfonts.com/fonts/fort-foundry/native/light-italic/
+ * 
+ * Webfont: Native-Bold by Fort Foundry
+ * URL: https://www.myfonts.com/fonts/fort-foundry/native/bold/
+ * 
+ * Webfont: Native-Regular by Fort Foundry
+ * URL: https://www.myfonts.com/fonts/fort-foundry/native/regular/
+ * 
+ * Webfont: Native-Light by Fort Foundry
+ * URL: https://www.myfonts.com/fonts/fort-foundry/native/light/
+ * 
+ * Webfont: Native-BoldItalic by Fort Foundry
+ * URL: https://www.myfonts.com/fonts/fort-foundry/native/bold-italic/
+ * 
+ * 
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3474541
+ * Licensed pageviews: 10,000
+ * Webfonts copyright: Copyright &#x00A9; 2016 by Mattox Shuler. All rights reserved.
+ * 
+ * © 2017 MyFonts Inc
+*/
+/* @import must be at top of file, otherwise CSS will not work */
+@font-face {
+  font-family: 'Native-Italic';
+  src: url("../../../assets/fonts/native/35046D_0_0.eot");
+  src: url("../../../assets/fonts/native/35046D_0_0.eot?#iefix") format("embedded-opentype"), url("../../../assets/fonts/native/35046D_0_0.woff2") format("woff2"), url("../../../assets/fonts/native/35046D_0_0.woff") format("woff"), url("../../../assets/fonts/native/35046D_0_0.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Native-Bold';
+  src: url("../../../assets/fonts/native/35046D_2_0.eot");
+  src: url("../../../assets/fonts/native/35046D_2_0.eot?#iefix") format("embedded-opentype"), url("../../../assets/fonts/native/35046D_2_0.woff2") format("woff2"), url("../../../assets/fonts/native/35046D_2_0.woff") format("woff"), url("../../../assets/fonts/native/35046D_2_0.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Native-Regular';
+  src: url("../../../assets/fonts/native/35046D_3_0.eot");
+  src: url("../../../assets/fonts/native/35046D_3_0.eot?#iefix") format("embedded-opentype"), url("../../../assets/fonts/native/35046D_3_0.woff2") format("woff2"), url("../../../assets/fonts/native/35046D_3_0.woff") format("woff"), url("../../../assets/fonts/native/35046D_3_0.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Native-BoldItalic';
+  src: url("../../../assets/fonts/native/35046D_5_0.eot");
+  src: url("../../../assets/fonts/native/35046D_5_0.eot?#iefix") format("embedded-opentype"), url("../../../assets/fonts/native/35046D_5_0.woff2") format("woff2"), url("../../../assets/fonts/native/35046D_5_0.woff") format("woff"), url("../../../assets/fonts/native/35046D_5_0.ttf") format("truetype"); }
+
 @font-face {
   font-family: "Dala Floda Web";
-  src: url("../../../assets/fonts/DalaFloda-Bold-Web.eot");
-  src: url("../../../assets/fonts/DalaFloda-Bold-Web.eot?#iefix") format("embedded-opentype"), url("../../../assets/fonts/DalaFloda-Bold-Web.woff") format("woff"), url("../../../assets/fonts/DalaFloda-Bold-Web.ttf") format("truetype"), url("../../../assets/fonts/DalaFloda-Bold-Web.svg#DalaFloda-Bold") format("svg");
+  src: url("../../../assets/fonts/dala-floda/DalaFloda-Bold-Web.eot");
+  src: url("../../../assets/fonts/dala-floda/DalaFloda-Bold-Web.eot?#iefix") format("embedded-opentype"), url("../../../assets/fonts/dala-floda/DalaFloda-Bold-Web.woff") format("woff"), url("../../../assets/fonts/dala-floda/DalaFloda-Bold-Web.ttf") format("truetype"), url("../../../assets/fonts/dala-floda/DalaFloda-Bold-Web.svg#DalaFloda-Bold") format("svg");
   font-style: normal;
   font-stretch: normal; }
 
@@ -64,8 +122,8 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: "Work Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-  font-size: 1.6rem;
+  font-family: "Native-Regular", "Bitstream Vera Sans Mono", "Consolas", "Courier", monospace;
+  font-size: 1.2rem;
   -webkit-font-smoothing: antialiased;
   font-weight: 600;
   line-height: 1;
@@ -117,7 +175,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
       width: 22rem;
       margin: 6.5rem 0 0 0; } }
   .button:hover {
-    color: #fffffa;
+    color: #fffffb;
     background: #dc7a6e;
     -webkit-transform: scale(0.98);
     -moz-transform: scale(0.98);
@@ -160,8 +218,8 @@ input,
 label,
 select {
   display: block;
-  font-family: "Work Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-  font-size: 1.6rem; }
+  font-family: "Native-Regular", "Bitstream Vera Sans Mono", "Consolas", "Courier", monospace;
+  font-size: 1.2rem; }
 
 label {
   font-weight: 600;
@@ -173,13 +231,13 @@ label {
 
 input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], input:not([type]), textarea,
 select[multiple=multiple] {
-  background-color: #fffffa;
+  background-color: #fffffb;
   border: 1px solid #5b7366;
   border-radius: 4rem;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
   box-sizing: border-box;
-  font-family: "Work Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-  font-size: 1.6rem;
+  font-family: "Native-Regular", "Bitstream Vera Sans Mono", "Consolas", "Courier", monospace;
+  font-size: 1.2rem;
   margin-bottom: 0.75em;
   padding: 0.5em;
   transition: border-color 150ms ease;
@@ -264,22 +322,23 @@ html {
 
 body {
   color: #5b7366;
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-family: "Bitstream Vera Sans Mono", "Consolas", "Courier", monospace;
   font-feature-settings: "kern", "liga", "pnum";
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased; }
   .wf-active body {
-    font-family: "Work Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif; }
+    font-family: "Native-Regular", "Bitstream Vera Sans Mono", "Consolas", "Courier", monospace; }
 
 h1,
 h2,
 h3,
 h4,
 h5 {
+  color: #263430;
   font-family: "Playfair Display", "Georgia", "Cambria", "Times New Roman", "Times", serif;
   font-weight: 900;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   -webkit-font-feature-settings: "kern";
   -moz-font-feature-settings: "kern";
   -ms-font-feature-settings: "kern";
@@ -294,29 +353,17 @@ h5 {
     line-height: 1; }
 
 h1 {
-  color: #dc7a6e;
-  font-size: 3.6rem;
-  line-height: 40px !important;
+  font-size: 4rem;
+  line-height: 1;
   letter-spacing: 1.25px;
-  text-shadow: 0 4px 6px rgba(13, 27, 23, 0.2);
-  margin: 0 0 22px;
   position: relative; }
-  @media screen and (min-width: 768px) {
-    h1 {
-      font-size: 6.4rem;
-      letter-spacing: 1.5px;
-      line-height: 80px !important;
-      margin: 0 0 64px; } }
-  @media screen and (min-width: 1024px) {
-    h1 {
-      font-size: 8.8rem;
-      line-height: 104px !important;
-      margin: 0 0 40px; } }
-  @media screen and (min-width: 1440px) {
-    h1 {
-      font-size: 10.4rem;
-      line-height: 120px !important;
-      margin: 0 0 96px 0; } }
+  h1 small {
+    color: #5b7366;
+    font-family: "Work Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    font-size: 1.2rem;
+    line-height: 3;
+    letter-spacing: 4px;
+    text-transform: uppercase; }
 
 h2 {
   color: #263430;
@@ -397,7 +444,7 @@ h6 {
   text-transform: uppercase;
   margin: 0; }
   .wf-active h6 {
-    font-family: "Work Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif; }
+    font-family: "Native-Regular", "Bitstream Vera Sans Mono", "Consolas", "Courier", monospace; }
   @media screen and (min-width: 768px) {
     h6 {
       font-size: 1.2rem;
@@ -409,7 +456,7 @@ h6 {
 
 p {
   font-weight: 400;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.25px;
   margin: 0 0 2rem 0; }
   @media screen and (min-width: 768px) {
     p {
@@ -422,8 +469,8 @@ p {
     p {
       font-size: 2.2rem; } }
   p.about {
-    color: #fffffa;
-    font-size: 1.6rem;
+    color: #fffffb;
+    font-size: 1.2rem;
     line-height: 2.4rem;
     border-left: solid 1px #dc7a6e;
     margin: 0;
@@ -467,7 +514,7 @@ p {
       p.featured__intro {
         font-size: 2.2rem; } }
   p.conclusion__copy {
-    color: #fffffa;
+    color: #fffffb;
     font-weight: 500;
     line-height: 2.4rem; }
     @media screen and (min-width: 768px) {
@@ -484,7 +531,7 @@ p {
         line-height: 3.4rem;
         letter-spacing: 0.05rem; } }
   p.footer__copy {
-    color: #fffffa; }
+    color: #fffffb; }
     @media screen and (min-width: 768px) {
       p.footer__copy {
         margin: 0.5rem 0 0 0; } }
@@ -687,40 +734,24 @@ html {
   .highlight .il {
     color: #099; }
 
+body {
+  background: #fffffb; }
+
 header {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  background: url("../assets/images/wood_background_xlarge.jpg") no-repeat #5b7366;
-  background-size: cover;
   position: relative; }
   header::after {
     clear: both;
     content: "";
     display: table; }
-  header .logo {
-    width: 42px;
-    height: auto;
-    opacity: 1;
-    position: absolute;
-    top: 16px;
-    left: 27px; }
-    @media screen and (min-width: 768px) {
-      header .logo {
-        top: 40px;
-        left: 40px; } }
-    @media screen and (min-width: 1024px) {
-      header .logo {
-        left: 64px; } }
-    @media screen and (min-width: 1440px) {
-      header .logo {
-        left: 80px; } }
   header .header__container {
     float: left;
     display: block;
     margin-right: 0%;
-    width: 100%;
-    height: 80vh;
+    width: 83.33333%;
+    margin-left: 8.33333%;
     display: -webkit-box;
     display: -moz-box;
     display: box;
@@ -728,81 +759,114 @@ header {
     display: -moz-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -moz-box-orient: vertical;
-    box-orient: vertical;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    box-orient: horizontal;
     -webkit-box-direction: normal;
     -moz-box-direction: normal;
     box-direction: normal;
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    flex-direction: column;
-    -ms-flex-direction: column;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    box-pack: center;
-    -webkit-justify-content: center;
-    -moz-justify-content: center;
-    -ms-justify-content: center;
-    -o-justify-content: center;
-    justify-content: center;
-    -ms-flex-pack: center; }
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    box-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-pack: justify;
+    position: absolute;
+    z-index: 1;
+    top: 16px; }
     header .header__container:last-child {
       margin-right: 0; }
-    @media screen and (min-width: 768px) {
-      header .header__container {
-        height: 90vh;
-        padding: 0; } }
-    @media screen and (min-width: 1024px) {
-      header .header__container {
-        height: 95vh; } }
-    header .header__container aside {
-      float: left;
-      display: block;
-      margin-right: 0%;
-      width: 83.33333%;
-      margin-left: 8.33333%;
-      position: relative; }
-      header .header__container aside:last-child {
-        margin-right: 0; }
-      @media screen and (min-width: 1024px) {
-        header .header__container aside {
-          float: left;
-          display: block;
-          margin-right: 0%;
-          width: 66.66667%;
-          margin-left: 16.66667%; }
-          header .header__container aside:last-child {
-            margin-right: 0; } }
-    header .header__container article {
-      float: left;
-      display: block;
-      margin-right: 0%;
-      width: 83.33333%;
-      margin-left: 8.33333%; }
-      header .header__container article:last-child {
-        margin-right: 0; }
+    header .header__container .logo {
+      width: auto;
+      height: 42px; }
       @media screen and (min-width: 768px) {
-        header .header__container article {
-          float: left;
-          display: block;
-          margin-right: 0%;
-          width: 58.33333%;
-          margin-left: 25%; }
-          header .header__container article:last-child {
-            margin-right: 0; } }
-      @media screen and (min-width: 1024px) {
-        header .header__container article {
-          float: left;
-          display: block;
-          margin-right: 0%;
-          width: 33.33333%;
-          margin-left: 41.66667%; }
-          header .header__container article:last-child {
-            margin-right: 0; } }
+        header .header__container .logo {
+          height: 48px; } }
+    header .header__container .icon-menu {
+      width: 30px;
+      height: auto; }
 
+.hero {
+  background: url("../assets/images/hero_background-2x.jpg") 0 0 no-repeat;
+  background-size: cover;
+  position: relative;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+  .hero::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+/* Styling specific to the homepage hero */
+.home {
+  height: 85vh;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center; }
+  .home:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(255, 255, 251, 0.3);
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 251, 0.3), #fffffb);
+    background-image: linear-gradient(to bottom,rgba(255, 255, 251, 0.3), #fffffb); }
+
+.hero-content {
+  float: left;
+  display: block;
+  margin-right: 0%;
+  width: 83.33333%;
+  margin-left: 8.33333%;
+  position: relative; }
+  .hero-content:last-child {
+    margin-right: 0; }
+  .hero-content p {
+    margin: 16px 0 0 0; }
+
+/* DELETE THIS FILE WHEN YOU'RE DONE WITH THE HOMEPAGE */
 body {
-  background: #fffffa; }
+  background: #fffffb; }
 
 .page-content {
   background: url("../assets/images/topography_01.svg") no-repeat;

@@ -1,12 +1,70 @@
 @charset "UTF-8";
 
+/**
+ * @license
+ * MyFonts Webfont Build ID 3474541, 2017-10-28T17:02:28-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Native-Italic by Fort Foundry
+ * URL: https://www.myfonts.com/fonts/fort-foundry/native/italic/
+ * 
+ * Webfont: Native-LightItalic by Fort Foundry
+ * URL: https://www.myfonts.com/fonts/fort-foundry/native/light-italic/
+ * 
+ * Webfont: Native-Bold by Fort Foundry
+ * URL: https://www.myfonts.com/fonts/fort-foundry/native/bold/
+ * 
+ * Webfont: Native-Regular by Fort Foundry
+ * URL: https://www.myfonts.com/fonts/fort-foundry/native/regular/
+ * 
+ * Webfont: Native-Light by Fort Foundry
+ * URL: https://www.myfonts.com/fonts/fort-foundry/native/light/
+ * 
+ * Webfont: Native-BoldItalic by Fort Foundry
+ * URL: https://www.myfonts.com/fonts/fort-foundry/native/bold-italic/
+ * 
+ * 
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3474541
+ * Licensed pageviews: 10,000
+ * Webfonts copyright: Copyright &#x00A9; 2016 by Mattox Shuler. All rights reserved.
+ * 
+ * © 2017 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/35046d");
+
+  
+@font-face {font-family: 'Native-Italic';src: url('../../../assets/fonts/native/35046D_0_0.eot');src: url('../../../assets/fonts/native/35046D_0_0.eot?#iefix') format('embedded-opentype'),url('../../../assets/fonts/native/35046D_0_0.woff2') format('woff2'),url('../../../assets/fonts/native/35046D_0_0.woff') format('woff'),url('../../../assets/fonts/native/35046D_0_0.ttf') format('truetype');}
+ 
+  
+// @font-face {font-family: 'Native-LightItalic';src: url('webfonts/35046D_1_0.eot');src: url('webfonts/35046D_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/35046D_1_0.woff2') format('woff2'),url('webfonts/35046D_1_0.woff') format('woff'),url('webfonts/35046D_1_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'Native-Bold';src: url('../../../assets/fonts/native/35046D_2_0.eot');src: url('../../../assets/fonts/native/35046D_2_0.eot?#iefix') format('embedded-opentype'),url('../../../assets/fonts/native/35046D_2_0.woff2') format('woff2'),url('../../../assets/fonts/native/35046D_2_0.woff') format('woff'),url('../../../assets/fonts/native/35046D_2_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'Native-Regular';src: url('../../../assets/fonts/native/35046D_3_0.eot');src: url('../../../assets/fonts/native/35046D_3_0.eot?#iefix') format('embedded-opentype'),url('../../../assets/fonts/native/35046D_3_0.woff2') format('woff2'),url('../../../assets/fonts/native/35046D_3_0.woff') format('woff'),url('../../../assets/fonts/native/35046D_3_0.ttf') format('truetype');}
+ 
+  
+// @font-face {font-family: 'Native-Light';src: url('webfonts/35046D_4_0.eot');src: url('webfonts/35046D_4_0.eot?#iefix') format('embedded-opentype'),url('webfonts/35046D_4_0.woff2') format('woff2'),url('webfonts/35046D_4_0.woff') format('woff'),url('webfonts/35046D_4_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'Native-BoldItalic';src: url('../../../assets/fonts/native/35046D_5_0.eot');src: url('../../../assets/fonts/native/35046D_5_0.eot?#iefix') format('embedded-opentype'),url('../../../assets/fonts/native/35046D_5_0.woff2') format('woff2'),url('../../../assets/fonts/native/35046D_5_0.woff') format('woff'),url('../../../assets/fonts/native/35046D_5_0.ttf') format('truetype');}
+
 @font-face {
 	font-family: "Dala Floda Web";
-	src: url('../../../assets/fonts/DalaFloda-Bold-Web.eot');
-	src: url('../../../assets/fonts/DalaFloda-Bold-Web.eot?#iefix') format('embedded-opentype'),
-	url('../../../assets/fonts/DalaFloda-Bold-Web.woff') format('woff'),
-	url('../../../assets/fonts/DalaFloda-Bold-Web.ttf') format('truetype'),
-	url('../../../assets/fonts/DalaFloda-Bold-Web.svg#DalaFloda-Bold') format('svg');
+	src: url('../../../assets/fonts/dala-floda/DalaFloda-Bold-Web.eot');
+	src: url('../../../assets/fonts/dala-floda/DalaFloda-Bold-Web.eot?#iefix') format('embedded-opentype'),
+	url('../../../assets/fonts/dala-floda/DalaFloda-Bold-Web.woff') format('woff'),
+	url('../../../assets/fonts/dala-floda/DalaFloda-Bold-Web.ttf') format('truetype'),
+	url('../../../assets/fonts/dala-floda/DalaFloda-Bold-Web.svg#DalaFloda-Bold') format('svg');
 	font-style: normal;
 	font-stretch: normal;
 }
@@ -43,14 +101,20 @@ $monospace: "Bitstream Vera Sans Mono", "Consolas", "Courier", monospace;
 
 $verdana: "Verdana", "Geneva", sans-serif;
 
-/// Dala Floda serif font stack.
+/// Dala Floda font stack.
 ///
 /// @type List
 $dala-floda: "Dala Floda Web", "Playfair Display", "Georgia", "Cambria", "Times New Roman", "Times", serif;
 $dala-floda-fallback: "Playfair Display", "Georgia", "Cambria", "Times New Roman", "Times", serif;
 
-/// Work Sans serif font stack.
+/// Work Sans font stack.
 ///
 /// @type List
 $work-sans: "Work Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
 $work-sans-fallback: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+
+/// Native font stack.
+///
+/// @type List
+$native: 'Native-Regular', "Bitstream Vera Sans Mono", "Consolas", "Courier", monospace;
+$native-fallback: "Bitstream Vera Sans Mono", "Consolas", "Courier", monospace;

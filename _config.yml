@@ -6,10 +6,10 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Kyle Hyams | Designer
+title: Kyle Hyams — Experience Designer at Electronic Arts.
 email: hello@kylehya.ms
 description: > # this means to ignore newlines until "baseurl:"
-  Kyle Hyams is an Experience Designer from Orlando, Florida. He focuses on web design and animation, but also appreciates brand design.
+  I geek out over design systems, typography, and the small details.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://kylehya.ms" # the base hostname & protocol for your site
 twitter_username: kylehyams
