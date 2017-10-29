@@ -3,10 +3,10 @@
 @import "../neat/neat-helpers";
 
 // Neat Overrides
-$column: 8.333333333%;
+$column: percentage(1/12);
 $gutter: 0%;
 $grid-columns: 12;
-$max-width: 100%;
+$max-width: percentage(12/12);
 
 $visual-grid: false;
 $visual-grid-color: $salmon;

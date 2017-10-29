@@ -11,6 +11,18 @@
 	@include display(flex);
 	@include flex-direction(column);
 	@include justify-content(center);
+	
+	@include media($medium-screen) {
+		height: 50vh;
+	}
+	
+	@include media($large-screen) {
+		height: 55vh;
+	}
+	
+	@include media($medium-screen) {
+		height: 60vh;
+	}
 		
 	&:before {
 		content: '';
@@ -19,6 +31,18 @@
 		position: absolute;
 		@include linear-gradient(to bottom, rgba($creme, 0.3), rgba($creme, 1));
 	}
+	
+	.topography-small {
+		width: 260px;
+		height: auto;
+		opacity: 0.3;
+		position: absolute;
+		transform: rotateX(180deg);
+		transform-origin: 50% 50%;
+		left: 0;
+		bottom: 0;
+	}
+	
 }
 
 .hero-content {
@@ -26,8 +50,17 @@
 	@include shift(1);
 	position: relative;
 	
+	@include media($medium-screen) {
+		@include span-columns(9);
+	}
+	
 	p {
 		margin: 16px 0 0 0;
+		
+		@include media($xlarge-screen) {
+			margin: 24px 0 0 0;
+		}
+		
 	}
 	
 }

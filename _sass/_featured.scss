@@ -1,0 +1,61 @@
+.featured {
+	@include outer-container;
+	
+	&__inner {
+		@include span-columns(10);
+		@include shift(1);
+		
+		@include media($medium-screen) {
+			background: $creme;
+			padding: 48px percentage(1/12);
+			-webkit-filter: drop-shadow(0 16px 32px rgba($olive-darker,0.12));
+					filter: drop-shadow(0 16px 32px rgba($olive-darker,0.12));
+		}
+		
+		.work-list {
+			
+			&__link {
+				display: block;
+				margin: 24px 0 0 0;
+				
+				&:first-child {
+					margin: 28px 0 0 0;
+				}
+				
+				@include media($medium-screen) {
+					margin: 32px 0 0 0;
+					
+					&:first-child {
+						margin: 36px 0 0 0;
+					}
+					
+				}
+				
+				p {
+					margin: 4px 0 0 0;
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+	.topography-large {
+// 		opacity: 0;
+		
+		@include media($medium-screen) {
+			width: 520px;
+			height: auto;
+			opacity: 0.3;
+			position: absolute;
+			z-index: -1;
+			transform: rotateX(180deg);
+			transform-origin: 50% 50%;
+			right: -34%;
+			bottom: -32%;
+		}
+		
+	}
+	
+}

@@ -5,26 +5,36 @@ layout: default
 <!-- Hero -->
 <section class="hero home">
 	<div class="hero-content">
-		<h1><small>Web &amp; Brand Design</small></h1>
+		<h1>
+			<small>Web &amp; Brand Design</small>
+		</h1>
 		<h1>{{ site.title }}</h1>
 		<p>{{ site.description }}</p>
 	</div>
+	<img class="topography-small" src="assets/images/topography.svg" alt="topography" />
 </section>
 <!-- /Hero -->
 
 <!-- Work list -->
-<section class="featured__copy">
-	<div class="featured__copy--container">
+<section class="featured">
+	<div class="featured__inner">
 		
-		<!-- Loop through the portfolio -->
-		{% for portfolio in site.portfolio %}
-			<a href="{{ portfolio.url | prepend: site.baseurl }}">
-				<h2>{{ portfolio.title }}</h2>
-				<p>{{ portfolio.excerpt }}</p>
-			</a>
-		{% endfor %}
-		<!-- End loop -->
+		<h2>
+			<small>Featured Work</small>
+		</h2>
+		
+		<div class="work-list">
+			<!-- Loop through the portfolio -->
+			{% for portfolio in site.portfolio %}
+				<a class="work-list__link" href="{{ portfolio.url | prepend: site.baseurl }}">
+					<h2>{{ portfolio.title }}</h2>
+					<p>{{ portfolio.excerpt }}</p>
+				</a>
+			{% endfor %}
+			<!-- End loop -->
+		</div>
 		
 	</div>
+	<img class="topography-large" src="assets/images/topography.svg" alt="topography" />
 </section>
 <!-- /Work list -->

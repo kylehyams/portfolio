@@ -2,6 +2,12 @@ body {
 	background: $base-background-color;
 }
 
+img,
+picture {
+	margin: 0;
+	max-width: 100%;
+}
+
 header {
 	@include outer-container;
 	position: relative;

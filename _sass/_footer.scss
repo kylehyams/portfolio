@@ -2,9 +2,11 @@ footer {
 	@include outer-container;
 	background: $olive-dark;
 	padding: 0 0 6rem 0;
+	margin: 48px 0 0 0;
 
 	@include media($medium-screen) {
 		padding: 0;
+		margin: 64px 0 0 0;
 	}
 
 	aside {

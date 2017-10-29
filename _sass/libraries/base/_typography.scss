@@ -6,7 +6,7 @@ html {
 body {
 	color: $base-font-color;
 	font-family: $native-fallback;
-	font-feature-settings: "kern", "liga", "pnum";
+	@include font-feature-settings("kern", "lnum", "liga");
 	font-size: $base-font-size;
 	line-height: $base-line-height;
 	-webkit-font-smoothing: antialiased;
@@ -23,10 +23,7 @@ h5 {
 	color: $olive-dark;
 	font-family: $dala-floda-fallback;
 	font-weight: 900;
-	font-size: $base-font-size;
-	@include font-feature-settings("kern");
-	// line-height: 1;
-	// margin: 0 0 $small-spacing;
+// 	@include font-feature-settings("kern", "lnum", "liga");
 	.wf-active & {
 		font-family: $heading-font-family;
 		font-weight: inherit;
@@ -37,11 +34,24 @@ h5 {
 h1 {
 	font-size: 4rem;
 	line-height: $heading-line-height;
-	letter-spacing: 1.25px;
+	letter-spacing: 1px;
 	position: relative;
-	@media screen and (min-width: 768px) {}
-	@media screen and (min-width: 1024px) {}
-	@media screen and (min-width: 1440px) {}
+	
+	@media screen and (min-width: 768px) {
+		font-size: 5.6rem;
+		line-height: 64px;
+	}
+	
+	@media screen and (min-width: 1024px) {
+		font-size: 7.2rem;
+		line-height: 80px;
+	}
+	
+	@media screen and (min-width: 1440px) {
+		font-size: 8.8rem;
+		line-height: 96px;
+	}
+	
 	small {
 		color: $base-font-color;
 		font-family: $work-sans;
@@ -49,275 +59,227 @@ h1 {
 		line-height: 3;
 		letter-spacing: 4px;
 		text-transform: uppercase;
+		
+		@media screen and (min-width: 768px) {
+			font-size: 1.6rem;
+		}
+		
+		@media screen and (min-width: 1440px) {
+			font-size: 2rem;
+		}
+		
 	}
+	
 }
 
 h2 {
-  color: $olive-dark;
-  font-size: 4.8rem;
-  letter-spacing: 0.15rem;
-  margin: 4rem 0;
-  @media screen and (min-width: 768px) {
-    font-size: 8rem;
-    letter-spacing: 0.25rem;
-  }
-  @media screen and (min-width: 1024px) {
-    font-size: 8.4rem;
-    margin: 6rem 0;
-  }
-  @media screen and (min-width: 1440px) {
-    font-size: 12rem;
-    margin: 8rem 0;
-  }
+	font-size: 3.2rem;
+	letter-spacing: 0.75px;
+	
+	@media screen and (min-width: 768px) {}
+	
+	@media screen and (min-width: 1024px) {}
+	
+	@media screen and (min-width: 1440px) {}
+	
+	small {
+		color: $base-font-color;
+		font-family: $work-sans;
+		font-size: 1.2rem;
+		line-height: 3;
+		letter-spacing: 4px;
+		text-transform: uppercase;
+		position: relative;
+		padding: 0 0 16px;
+		
+		&:after {
+			content: '';
+			width: 80px;
+			height: 1px;
+			background: $olive;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
+		
+	}
+	
 }
 
 h3 {
-  color: $olive-dark;
-  font-size: 4.2rem;
-  letter-spacing: 0.125rem;
-  margin: 0;
-  position: relative;
-  @media screen and (min-width: 768px) {
-    font-size: 5.4rem;
-  }
-  @media screen and (min-width: 1024px) {
-    font-size: 7.2rem;
-  }
-  @media screen and (min-width: 1440px) {
-    font-size: 9.6rem;
-  }
+	font-size: 4.2rem;
+	letter-spacing: 0.125rem;
+	margin: 0;
+	position: relative;
+	
+	@media screen and (min-width: 768px) {
+		font-size: 5.4rem;
+	}
+	
+	@media screen and (min-width: 1024px) {
+		font-size: 7.2rem;
+	}
+	
+	@media screen and (min-width: 1440px) {
+		font-size: 9.6rem;
+	}
+	
 }
 
 h4 {
-  color: $action-color;
-  font-size: 3.6rem;
-  letter-spacing: 0.125rem;
-  text-shadow: 0 3px 5px rgba($olive-darker, 0.1);
-  margin: 0 0 2rem 0;
-  @media screen and (min-width: 768px) {
-    font-size: 4.8rem;
-    letter-spacing: 0.175rem;
-    margin: 0 0 3rem 0;
-  }
-  @media screen and (min-width: 1024px) {
-    font-size: 6.6rem;
-    letter-spacing: 0.25rem;
-    margin: 0 0 4rem 0;
-  }
-  @media screen and (min-width: 1440px) {
-    font-size: 8.4rem;
-    letter-spacing: 0.2rem;
-    margin: 0 0 6rem 0;
-  }
+	font-size: 3.6rem;
+	letter-spacing: 0.125rem;
+	margin: 0 0 2rem 0;
+	
+	@media screen and (min-width: 768px) {
+		font-size: 4.8rem;
+		letter-spacing: 0.175rem;
+		margin: 0 0 3rem 0;
+	}
+	
+	@media screen and (min-width: 1024px) {
+		font-size: 6.6rem;
+		letter-spacing: 0.25rem;
+		margin: 0 0 4rem 0;
+	}
+	
+	@media screen and (min-width: 1440px) {
+		font-size: 8.4rem;
+		letter-spacing: 0.2rem;
+		margin: 0 0 6rem 0;
+	}
+	
 }
 
 h5 {
-  color: $action-color;
-  font-size: 3.3rem;
-  letter-spacing: 0.125rem;
-  margin: 0 0 2rem 0;
-
-  @media screen and (min-width: 1024px) {
-    font-size: 4.8rem;
-    letter-spacing: 0.175rem;
-    margin: 0 0 4rem 0;
-  }
-
-  @media screen and (min-width: 1440px) {
-    font-size: 6.6rem;
-    letter-spacing: 0.2rem;
-    margin: 0 0 6rem 0;
-  }
+	font-size: 3.3rem;
+	letter-spacing: 0.125rem;
+	margin: 0 0 2rem 0;
+	
+	@media screen and (min-width: 1024px) {
+		font-size: 4.8rem;
+		letter-spacing: 0.175rem;
+		margin: 0 0 4rem 0;
+	}
+	
+	@media screen and (min-width: 1440px) {
+		font-size: 6.6rem;
+		letter-spacing: 0.2rem;
+		margin: 0 0 6rem 0;
+	}
+	
 }
 
 h6 {
-  color: $action-color;
-  font-family: $work-sans-fallback;
-  letter-spacing: 0.3rem;
-  text-transform: uppercase;
-  margin: 0;
-  // margin: 0 0 $small-spacing;
-  .wf-active & {
-    font-family: $base-font-family;
-  }
-  @media screen and (min-width: 768px) {
-    font-size: 1.2rem;
-    letter-spacing: 0.36rem;
-  }
-  @media screen and (min-width: 1024px) {
-    font-size: 1.4rem;
-    letter-spacing: 0.45rem;
-  }
+	font-family: $work-sans-fallback;
+	letter-spacing: 0.3rem;
+	text-transform: uppercase;
+	margin: 0;
+	
+	.wf-active & {
+		font-family: $base-font-family;
+	}
+	
+	@media screen and (min-width: 768px) {
+		font-size: 1.2rem;
+		letter-spacing: 0.36rem;
+	}
+	
+	@media screen and (min-width: 1024px) {
+		font-size: 1.4rem;
+		letter-spacing: 0.45rem;
+	}
+  
 }
 
 p {
-  // margin: 0 0 $small-spacing;
-  font-weight: 400;
-  letter-spacing: 0.25px;
-  margin: 0 0 2rem 0;
-  @media screen and (min-width: 768px) {
-    font-size: 1.8rem;
-    margin: 0 0 3rem 0;
-  }
-  @media screen and (min-width: 1024px) {
-    font-size: 2rem;
-  }
-  @media screen and (min-width: 1440px) {
-    font-size: 2.2rem;
-  }
-  
-  &.about {
-    color: $creme;
-    font-size: $base-font-size;
-    line-height: 2.4rem;
-    border-left: solid 1px $salmon;
-    margin: 0;
-    padding: 0 0 0 16px;
-    @media screen and (min-width: 768px) {
-	    font-size: 2.4rem;
-	    line-height: 36px;
-	    padding: 0 0 0 23px;
-    }
-    @media screen and (min-width: 1024px) {
-	    font-size: 2.4rem;
-	    line-height: 40px !important;
-    }
-    
-    a {
-      color: $action-color;
-      text-shadow: 0 3px 6px rgba($olive-darker, 0.25);
-      text-decoration: none;
-      &:hover {
-        color: darken($action-color, 10%);
-      }
-    }
+	font-weight: 400;
+	line-height: 20px;
+	letter-spacing: 0.25px;
+	
+	@media screen and (min-width: 1024px) {
+		font-size: 1.6rem;
+		line-height: 24px;
+	}
+	
+	@media screen and (min-width: 1440px) {
+		font-size: 2rem;
+		line-height: 28px;
+	}
 
-  }
-  
-  &.anchor {
-	  font-size: 4.8rem;
-	  line-height: 48px;
-	  text-align: center;
-	  margin: 32px 0 0;
-	  
-	  a {
-		  color: $olive-darker;
-		  font-weight: normal;
-		  text-decoration: none;
-	  }
-	  
-  }
+	&.footer__copy {
+		color: $creme;
+		
+		@media screen and (min-width: 768px) {
+			margin: 0.5rem 0 0 0;
+		}
+		
+		@media screen and (min-width: 1024px) {
+			font-size: 1.8rem;
+			margin: 0;
+		}
+		
+		@media screen and (min-width: 1440px) {
+		  font-size: 2rem;
+		}
+	}
 
-  &.featured__intro {
-    font-weight: 500;
-    margin: 3rem 0;
-    @media screen and (min-width: 768px) {
-      font-size: 1.8rem;
-    }
-    @media screen and (min-width: 1024px) {
-      font-size: 2rem;
-      letter-spacing: 0.125rem;
-      margin: 6rem 0;
-    }
-    @media screen and (min-width: 1440px) {
-      font-size: 2.2rem;
-    }
-  }
-
-  &.conclusion__copy {
-    color: $creme;
-    font-weight: 500;
-    line-height: 2.4rem;
-    @media screen and (min-width: 768px) {
-      font-size: 1.8rem;
-      line-height: 2.6rem;
-    }
-    @media screen and (min-width: 1024px) {
-      font-size: 2rem;
-      line-height: 2.8rem;
-    }
-    @media screen and (min-width: 1440px) {
-      font-size: 2.2rem;
-      line-height: 3.4rem;
-      letter-spacing: 0.05rem;
-    }
-  }
-
-  &.footer__copy {
-    color: $creme;
-
-    @media screen and (min-width: 768px) {
-      margin: 0.5rem 0 0 0;
-    }
-
-    @media screen and (min-width: 1024px) {
-      font-size: 1.8rem;
-      margin: 0;
-    }
-
-    @media screen and (min-width: 1440px) {
-      font-size: 2rem;
-    }
-  }
-
-  &.footer__colophon {
-    font-size: 1.2rem;
-    letter-spacing: 0.5px;
-    line-height: 20px;
-    margin: 0 0 12px;
-    
-    &:last-child {margin: 0;}
-    
-    @media screen and (min-width: 768px) {
-	    font-size: 1.6rem;
-	    line-height: 24px;
-    }
-
-    a {
-      color: $olive;
-      text-decoration: underline;
-
-      &:hover {
-        color: darken($olive, 10%);
-        text-decoration: none;
-      }
-
-    }
-
-  }
+	&.footer__colophon {
+		font-size: 1.2rem;
+		letter-spacing: 0.5px;
+		line-height: 20px;
+		margin: 0 0 12px;
+		
+		&:last-child {margin: 0;}
+		
+		@media screen and (min-width: 768px) {
+			font-size: 1.6rem;
+			line-height: 24px;
+		}
+		
+		a {
+			color: $olive;
+			text-decoration: underline;
+			
+			&:hover {
+				color: darken($olive, 10%);
+				text-decoration: none;
+			}
+		
+		}
+	
+	}
 
 }
 
 a {
-  color: $action-color;
-  text-decoration: none;
-  transition: color $base-duration $base-timing;
-  &:active,
-  &:focus,
-  &:hover {
-    color: shade($action-color, 10%);
-  }
+	color: $action-color;
+	text-decoration: none;
+	transition: color $base-duration $base-timing;
+	
+	&:active,
+	&:focus,
+	&:hover {
+		color: shade($action-color, 10%);
+	}
+	
 }
 
 hr {
-  width: 7rem;
-  height: 0.1rem;
-  border-bottom: $base-border;
-  border-left: 0;
-  border-right: 0;
-  border-top: 0;
-  margin: 0 auto;
-  // margin: $base-spacing 0;
-  @media screen and (min-width: 768px) {
-    width: 10rem;
-  }
-  @media screen and (min-width: 1024px) {
-    width: 12rem;
-  }
-}
-
-img,
-picture {
-  margin: 0;
-  max-width: 100%;
+	width: 7rem;
+	height: 0.1rem;
+	border-bottom: $base-border;
+	border-left: 0;
+	border-right: 0;
+	border-top: 0;
+	margin: 0 auto;
+	
+	@media screen and (min-width: 768px) {
+		width: 10rem;
+	}
+	
+	@media screen and (min-width: 1024px) {
+		width: 12rem;
+	}
+	
 }
