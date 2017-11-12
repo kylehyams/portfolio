@@ -1,118 +1,114 @@
 footer {
 	@include outer-container;
 	background: $olive-dark;
-	padding: 0 0 6rem 0;
 	margin: 48px 0 0 0;
+	padding: 48px 0;
 
 	@include media($medium-screen) {
-		padding: 0;
 		margin: 64px 0 0 0;
+		padding: 64px 0;
 	}
-
-	aside {
-		@include span-columns(12);
-		height: 32rem;
-		background: url('../assets/images/headshot.jpg') no-repeat;
-		background-size: cover;
-		position: relative;
-
-		@include media($medium-screen) {
-			@include span-columns(6);
-			height: 57rem;
-			background: url('../assets/images/headshot_medium.jpg') no-repeat;
-			background-size: cover;
-		}
-
-		@include media($large-screen) {
-			height: 65rem;
-			background: url('../assets/images/headshot_large.jpg') no-repeat;
-			background-size: cover;
-		}
-
-		@include media($xlarge-screen) {
-			height: 83rem;
-			background: url('../assets/images/headshot_xlarge.jpg') no-repeat;
-			background-size: cover;
-		}
-
-		&:before {
-			content: '';
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			@include linear-gradient(to bottom, rgba($olive-dark, 0), rgba($olive-dark,0.85), rgba($olive-dark, 1));
-
-			@include media($medium-screen) {
-				@include linear-gradient(to right, rgba($olive-dark, 0), rgba($olive-dark,0.85), rgba($olive-dark, 1));	
-			}
-
-		}
-
+	
+	@include media($large-screen) {
+		margin: 80px 0 0 0;
+		padding: 80px 0;
 	}
-
-	article {
-		@include span-columns(10);
-		@include shift(1);
-		padding: 3rem 0 0 0;
-
+	
+	@include media($xlarge-screen) {
+		margin: 120px 0 0 0;
+		padding: 96px 0;
+	}
+	
+	.left {
+		width: percentage(10/12);
+		margin: 0 auto;
+		
 		@include media($medium-screen) {
 			@include span-columns(5);
-			@include shift(0);
-			height: 57rem;
-			@include display(flex);
-			@include flex-direction(column);
-			@include justify-content(center);
+			@include shift(1);
+		}
+		
+		@include media($large-screen) {
+			@include span-columns(4);
+		}
+		
+		@include media($xlarge-screen) {
+			@include span-columns(5);
+			padding: 0 80px 0 0;
+		}
+		
+		p {margin: 16px 0 0 0;}
+		
+		.button {margin: 24px 0 0 0;}
+		
+	}
+	
+	.right {
+		width: percentage(10/12);
+		margin: 40px auto 0;
+		
+		@include media($medium-screen) {
+			@include span-columns(5);
+			margin: 0;
+			padding: 0 0 0 48px;
+		}
+		
+		@include media($large-screen) {
+			@include span-columns(4);
+			@include shift(2);
 			padding: 0;
 		}
-
-		@include media($large-screen) {
-			height: 65rem;
-		}
-
+		
 		@include media($xlarge-screen) {
-			height: 83rem;
+			@include shift(1);
 		}
+		
+		.social {
 
-		.social__media {
-			height: 3rem;
-			@include display(flex);
-			@include flex-direction(row);
-			@include justify-content(space-between);
-			margin: 6rem 0 8rem 0;
-
-			@include media($medium-screen) {
-				height: 3rem;
-				margin: 4rem 0;
-			}
-
-			@include media($large-screen) {
-				height: 3.5rem;
-				margin: 4rem 0 6rem;
-			}
-
-			@include media($xlarge-screen) {
-				height: 4rem;
-				margin: 8rem 0 10rem;
-			}
-
-			li {
-
+			&__icons {
+				
+				display: inline;
+				margin: 0 32px 0 0;
+				
+				&:last-child {margin: 0;}
+				
+				@include media($large-screen) {
+					margin: 0 40px 0 0;
+				}
+				
 				a {
 
 					svg {
-						height: 3rem;
-
-						@include media($medium-screen) {
-							height: 3rem;
+						color: $olive;
+						@include transition(all 750ms cubic-bezier(0.215, 0.61, 0.355, 1));
+						
+						&.icon-dribbble,
+						&.icon-instagram {
+							width: 24px;
+							height: 24px;
 						}
-
-						@include media($large-screen) {
-							height: 3.5rem;
+						
+						&.icon-behance {
+							width: 38px;
+							height: 24px;
 						}
-
-						@include media($xlarge-screen) {
-							height: 4rem;
+						
+						&.icon-twitter {
+							width: 29px;
+							height: 24px;
 						}
+						
+					}
+					
+					&:hover {
+						
+						.icon-dribbble,
+						.icon-instagram,
+						.icon-behance,
+						.icon-twitter {
+							color: $action-color;
+						}
+						
 					}
 
 				}
@@ -120,7 +116,11 @@ footer {
 			}
 
 		}
-
+		
+		.colophon {
+			margin: 24px 0 0 0;
+		}
+		
 	}
 
 }

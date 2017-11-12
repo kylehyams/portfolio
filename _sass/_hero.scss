@@ -17,11 +17,11 @@
 	}
 	
 	@include media($large-screen) {
-		height: 55vh;
+		height: 60vh;
 	}
 	
-	@include media($medium-screen) {
-		height: 60vh;
+	@include media($xlarge-screen) {
+		height: 50vh;
 	}
 		
 	&:before {
@@ -32,6 +32,7 @@
 		@include linear-gradient(to bottom, rgba($creme, 0.3), rgba($creme, 1));
 	}
 	
+/*
 	.topography-small {
 		width: 260px;
 		height: auto;
@@ -42,6 +43,7 @@
 		left: 0;
 		bottom: 0;
 	}
+*/
 	
 }
 

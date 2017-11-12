@@ -1,88 +1,75 @@
 #{$all-buttons} {
-  appearance: none;
-  background-color: $action-color;
-  border: 0;
-  border-radius: $base-border-radius;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-family: $base-font-family;
-  font-size: $base-font-size;
-  -webkit-font-smoothing: antialiased;
-  font-weight: 600;
-  line-height: 1;
-  padding: $small-spacing $base-spacing;
-  text-decoration: none;
-  transition: background-color $base-duration $base-timing;
-  user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-
-  &:hover,
-  &:focus {
-    background-color: shade($action-color, 20%);
-    color: #fff;
-  }
-
-  &:disabled {
-    cursor: not-allowed;
-    opacity: 0.5;
-
-    &:hover {
-      background-color: $action-color;
-    }
-  }
+	appearance: none;
+	background-color: $action-color;
+	border: 0;
+	border-radius: $base-border-radius;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-family: $base-font-family;
+	font-size: $base-font-size;
+	-webkit-font-smoothing: antialiased;
+	font-weight: 600;
+	line-height: 1;
+	padding: $small-spacing $base-spacing;
+	text-decoration: none;
+	transition: background-color $base-duration $base-timing;
+	user-select: none;
+	vertical-align: middle;
+	white-space: nowrap;
+	
+	&:hover,
+	&:focus {
+		background-color: shade($action-color, 20%);
+		color: #fff;
+	}
+	
+	&:disabled {
+		cursor: not-allowed;
+		opacity: 0.5;
+	
+		&:hover {
+			background-color: $action-color;
+		}
+	}
 }
 
+// My button
 .button {
-  font-size: 1.8rem;
-  font-weight: 500;
-  line-height: 6.2rem;
-  letter-spacing: 0.15rem;
-  text-align: center;
-  text-decoration: none;
-  border: solid 1px $salmon;
-  border-radius: $base-border-radius;
-  width: 21rem;
-  height: 6.5rem;
-  display: inline-block;
-  transition: background-color $base-duration $base-timing;
-  user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  margin: 2.5rem 0 0 0;
-  @media screen and (min-width: 768px) {
-    width: 20rem;
-  }
-  @media screen and (min-width: 1024px) {
-    margin: 4.5rem 0 0 0;
-  }
-  @media screen and (min-width: 1024px) {
-    @include hidpi(2) {
-        font-weight: 400;
-    }
-  }
-  @media screen and (min-width: 1440px) {
-    font-size: 2rem;
-    width: 22rem;
-    margin: 6.5rem 0 0 0;
-  }
-
-  &:hover {
-    color: $creme;
-    background: $action-color;
-    @include transform(scale(0.98));
-    @include transition-property(transform);
-    @include transition-duration($base-duration);
-    @include transition-timing-function($base-timing);
-  }
-
-  &:focus {
-    background: darken($action-color, 10%);
-    @include transform(scale(0.95));
-    @include transition-property(transform);
-    @include transition-duration($base-duration);
-    @include transition-timing-function($base-timing);
-  }
+	font-family: $work-sans-fallback;
+	font-size: 1.2rem;
+	font-weight: 400;
+	line-height: 48px;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	text-align: center;
+	text-decoration: none;
+	border: solid 1px $salmon;
+	border-radius: $base-border-radius;
+	min-width: 153px;
+	height: 48px;
+	display: inline-block;
+	padding: 0 24px;
+	transition: background-color $base-duration $base-timing;
+	user-select: none;
+	vertical-align: middle;
+	white-space: nowrap;
+	
+	&:hover {
+		color: $creme;
+		background: $action-color;
+		@include transform(scale(0.98));
+		@include transition-property(transform);
+		@include transition-duration($base-duration);
+		@include transition-timing-function($base-timing);
+	}
+	
+	&:focus {
+		background: darken($action-color, 10%);
+		@include transform(scale(0.95));
+		@include transition-property(transform);
+		@include transition-duration($base-duration);
+		@include transition-timing-function($base-timing);
+	}
 
 }
