@@ -26,17 +26,61 @@ header {
 		@include media($large-screen) {}
 		@include media($xlarge-screen) {}
 		
-		.logo {
-			width: auto;
-			height: 42px;
-			@include media($medium-screen) {
-				height: 48px;
+		.home-link {
+		
+			.logo {
+				width: auto;
+				height: 44px;
+				padding: 2px;
+				
+				@include media($medium-screen) {
+					height: 50px;
+				}
+				
+				&__outer,
+				&__inner {
+					fill: $olive-dark;
+					@include transform-origin(center);
+					transition: $longer-duration $base-timing;
+				}
+				
 			}
+			
+			&:hover {
+				
+				.logo__outer {
+					@include transform(rotate(180deg));
+				}
+				
+			}
+		
 		}
 		
 		.icon-menu {
 			width: 30px;
 			height: auto;
+			
+			@include media($medium-screen) {
+				display: none;
+			}
+			
+		}
+		
+		.nav {
+			display: none;
+			
+			@include media($medium-screen) {
+				display: block;
+			}
+			
+			li {
+				display: inline;
+				margin: 0 40px 0 0;
+				
+				&:last-child {margin: 0;}
+				
+			}
+			
 		}
 
 	}

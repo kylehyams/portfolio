@@ -69,7 +69,7 @@
 	font-stretch: normal;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,500|Playfair+Display:900);
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,500);
 
 /// Georgia font stack.
 ///
@@ -104,8 +104,8 @@ $verdana: "Verdana", "Geneva", sans-serif;
 /// Dala Floda font stack.
 ///
 /// @type List
-$dala-floda: "Dala Floda Web", "Playfair Display", "Georgia", "Cambria", "Times New Roman", "Times", serif;
-$dala-floda-fallback: "Playfair Display", "Georgia", "Cambria", "Times New Roman", "Times", serif;
+$dala-floda: "Dala Floda Web", "Georgia", "Cambria", "Times New Roman", "Times", serif;
+$dala-floda-fallback: "Georgia", "Cambria", "Times New Roman", "Times", serif;
 
 /// Work Sans font stack.
 ///

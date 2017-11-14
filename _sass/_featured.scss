@@ -34,6 +34,30 @@
 				
 				p {
 					margin: 4px 0 0 0;
+					position: relative;
+					transition: $long-duration $base-timing;
+					
+					// Horizontal line seen on hover state
+					&:after {
+						content: '';
+						width: 0;
+						height: 1px;
+						background: $action-color;
+						position: absolute;
+						top: 10px;
+						left: 0;
+						transition: $long-duration $base-timing;
+						
+						@include media($large-screen) {
+							top: 12px;
+						}
+						
+						@include media($xlarge-screen) {
+							top: 14px;
+						}
+						
+					}
+					
 				}
 				
 				@include media($medium-screen) {
@@ -64,6 +88,20 @@
 					&:first-child {
 						margin: 52px 0 0 0;
 					}
+				}
+				
+				// Hover state for work list
+				&:hover {
+					
+					p {
+						padding: 0 0 0 88px;
+						
+						&:after {
+							width: 80px;
+						}
+						
+					}
+					
 				}
 				
 			}

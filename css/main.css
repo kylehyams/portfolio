@@ -7,7 +7,7 @@
    License: none (public domain)
 */
 @import url("//hello.myfonts.net/count/35046d");
-@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,500|Playfair+Display:900);
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,500);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -322,7 +322,7 @@ h3,
 h4,
 h5 {
   color: #263430;
-  font-family: "Playfair Display", "Georgia", "Cambria", "Times New Roman", "Times", serif;
+  font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif;
   font-weight: 900;
   -webkit-font-feature-settings: "kern", "lnum", "liga";
   -moz-font-feature-settings: "kern", "lnum", "liga";
@@ -333,7 +333,7 @@ h5 {
   h3, .wf-active
   h4, .wf-active
   h5 {
-    font-family: "Dala Floda Web", "Playfair Display", "Georgia", "Cambria", "Times New Roman", "Times", serif;
+    font-family: "Dala Floda Web", "Georgia", "Cambria", "Times New Roman", "Times", serif;
     font-weight: inherit;
     line-height: 1; }
 
@@ -355,11 +355,13 @@ h1 {
       line-height: 96px; } }
   h1 small {
     color: #5b7366;
-    font-family: "Work Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
     font-size: 1.2rem;
     line-height: 3;
     letter-spacing: 4px;
     text-transform: uppercase; }
+    .wf-active h1 small {
+      font-family: "Work Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif; }
     @media screen and (min-width: 768px) {
       h1 small {
         font-size: 1.6rem; } }
@@ -379,13 +381,15 @@ h2 {
       font-size: 6.4rem; } }
   h2 small {
     color: #5b7366;
-    font-family: "Work Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
     font-size: 1.2rem;
     line-height: 3;
     letter-spacing: 4px;
     text-transform: uppercase;
     position: relative;
     padding: 0 0 16px; }
+    .wf-active h2 small {
+      font-family: "Work Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif; }
     h2 small:after {
       content: '';
       width: 80px;
@@ -486,9 +490,47 @@ p {
 a {
   color: #dc7a6e;
   text-decoration: none;
-  transition: color 250ms cubic-bezier(0.23, 1, 0.32, 1); }
-  a:active, a:focus, a:hover {
-    color: #c66e63; }
+  transition: color 250ms cubic-bezier(0.23, 1, 0.32, 1);
+  /* &:active,
+	&:focus,
+	&:hover {
+		color: shade($action-color, 10%);
+	} */ }
+  a.nav__link {
+    color: #0d1b17;
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    position: relative; }
+    .wf-active a.nav__link {
+      font-family: "Work Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif; }
+    a.nav__link:before {
+      content: '';
+      width: 100%;
+      height: 1px;
+      background: #0d1b17;
+      position: absolute;
+      top: 6px;
+      -webkit-transform: scale(0);
+      -moz-transform: scale(0);
+      -ms-transform: scale(0);
+      -o-transform: scale(0);
+      transform: scale(0);
+      -webkit-transform-origin: left;
+      -moz-transform-origin: left;
+      -ms-transform-origin: left;
+      -o-transform-origin: left;
+      transform-origin: left;
+      transition: 250ms cubic-bezier(0.23, 1, 0.32, 1); }
+    a.nav__link:hover:before {
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+      transform: scale(1); }
 
 hr {
   width: 7rem;
@@ -715,15 +757,43 @@ header {
     top: 16px; }
     header .header__container:last-child {
       margin-right: 0; }
-    header .header__container .logo {
+    header .header__container .home-link .logo {
       width: auto;
-      height: 42px; }
+      height: 44px;
+      padding: 2px; }
       @media screen and (min-width: 768px) {
-        header .header__container .logo {
-          height: 48px; } }
+        header .header__container .home-link .logo {
+          height: 50px; } }
+      header .header__container .home-link .logo__outer, header .header__container .home-link .logo__inner {
+        fill: #263430;
+        -webkit-transform-origin: center;
+        -moz-transform-origin: center;
+        -ms-transform-origin: center;
+        -o-transform-origin: center;
+        transform-origin: center;
+        transition: 750ms cubic-bezier(0.23, 1, 0.32, 1); }
+    header .header__container .home-link:hover .logo__outer {
+      -webkit-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      transform: rotate(180deg); }
     header .header__container .icon-menu {
       width: 30px;
       height: auto; }
+      @media screen and (min-width: 768px) {
+        header .header__container .icon-menu {
+          display: none; } }
+    header .header__container .nav {
+      display: none; }
+      @media screen and (min-width: 768px) {
+        header .header__container .nav {
+          display: block; } }
+      header .header__container .nav li {
+        display: inline;
+        margin: 0 40px 0 0; }
+        header .header__container .nav li:last-child {
+          margin: 0; }
 
 .hero {
   background: url("../assets/images/hero_background-2x.jpg") 0 0 no-repeat;
@@ -783,7 +853,7 @@ header {
       height: 50vh; } }
   @media screen and (min-width: 1024px) {
     .home {
-      height: 60vh; } }
+      height: 70vh; } }
   @media screen and (min-width: 1440px) {
     .home {
       height: 50vh; } }
@@ -870,7 +940,24 @@ header {
       .featured__inner .work-list__link:first-child {
         margin: 28px 0 0 0; }
       .featured__inner .work-list__link p {
-        margin: 4px 0 0 0; }
+        margin: 4px 0 0 0;
+        position: relative;
+        transition: 500ms cubic-bezier(0.23, 1, 0.32, 1); }
+        .featured__inner .work-list__link p:after {
+          content: '';
+          width: 0;
+          height: 1px;
+          background: #dc7a6e;
+          position: absolute;
+          top: 10px;
+          left: 0;
+          transition: 500ms cubic-bezier(0.23, 1, 0.32, 1); }
+          @media screen and (min-width: 1024px) {
+            .featured__inner .work-list__link p:after {
+              top: 12px; } }
+          @media screen and (min-width: 1440px) {
+            .featured__inner .work-list__link p:after {
+              top: 14px; } }
       @media screen and (min-width: 768px) {
         .featured__inner .work-list__link {
           margin: 32px 0 0 0; }
@@ -888,6 +975,10 @@ header {
           margin: 48px 0 0 0; }
           .featured__inner .work-list__link:first-child {
             margin: 52px 0 0 0; } }
+      .featured__inner .work-list__link:hover p {
+        padding: 0 0 0 88px; }
+        .featured__inner .work-list__link:hover p:after {
+          width: 80px; }
 
 /* DELETE THIS FILE WHEN YOU'RE DONE WITH THE HOMEPAGE */
 body {
@@ -1055,7 +1146,7 @@ body {
     .page-content .content__02 aside:before,
     .page-content .content__03 aside:before {
       color: #dc7a6e;
-      font-family: "Playfair Display", "Georgia", "Cambria", "Times New Roman", "Times", serif;
+      font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif;
       font-weight: 900;
       font-size: 10.2rem;
       letter-spacing: -0.2rem;
@@ -1070,7 +1161,7 @@ body {
       .wf-active .page-content .content__01 aside:before, .wf-active
       .page-content .content__02 aside:before, .wf-active
       .page-content .content__03 aside:before {
-        font-family: "Dala Floda Web", "Playfair Display", "Georgia", "Cambria", "Times New Roman", "Times", serif;
+        font-family: "Dala Floda Web", "Georgia", "Cambria", "Times New Roman", "Times", serif;
         font-weight: inherit; }
       @media screen and (min-width: 768px) {
         .page-content .content__01 aside:before,

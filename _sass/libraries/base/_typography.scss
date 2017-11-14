@@ -9,9 +9,11 @@ body {
 	font-size: $base-font-size;
 	line-height: $base-line-height;
 	-webkit-font-smoothing: antialiased;
+	
 	.wf-active & {
 		font-family: $base-font-family;
 	}
+	
 }
 
 h1,
@@ -52,11 +54,15 @@ h1 {
 	
 	small {
 		color: $base-font-color;
-		font-family: $work-sans;
+		font-family: $work-sans-fallback;
 		font-size: 1.2rem;
 		line-height: 3;
 		letter-spacing: 4px;
 		text-transform: uppercase;
+		
+		.wf-active & {
+			font-family: $work-sans;
+		}
 		
 		@media screen and (min-width: 768px) {
 			font-size: 1.6rem;
@@ -85,13 +91,17 @@ h2 {
 	
 	small {
 		color: $base-font-color;
-		font-family: $work-sans;
+		font-family: $work-sans-fallback;
 		font-size: 1.2rem;
 		line-height: 3;
 		letter-spacing: 4px;
 		text-transform: uppercase;
 		position: relative;
 		padding: 0 0 16px;
+		
+		.wf-active & {
+			font-family: $work-sans;
+		}
 		
 		&:after {
 			content: '';
@@ -215,7 +225,7 @@ p {
 			
 			@media screen and (min-width: 768px) {
 				box-shadow: inset 0 -1px 0 0 $olive;
-				transition: $base-duration $base-timing 
+				transition: $base-duration $base-timing; 
 			}
 			
 			&:hover {
@@ -233,10 +243,46 @@ a {
 	text-decoration: none;
 	transition: color $base-duration $base-timing;
 	
-	&:active,
+	/* &:active,
 	&:focus,
 	&:hover {
 		color: shade($action-color, 10%);
+	} */
+	
+	&.nav__link {
+		color: $olive-darker;
+		font-family: $work-sans-fallback;
+		font-size: 1.2rem;
+		font-weight: 500;
+		line-height: 12px;
+		letter-spacing: 3px;
+		text-transform: uppercase;
+		position: relative;
+		
+		.wf-active & {
+			font-family: $work-sans;
+		}
+		
+		&:before {
+			content: '';
+			width: 100%;
+			height: 1px;
+			background: $olive-darker;
+			position: absolute;
+			top: 6px;
+			@include transform(scale(0));
+			@include transform-origin(left);
+			transition: $base-duration $base-timing;
+		}
+		
+		&:hover {
+			
+			&:before {
+				@include transform(scale(1));
+			}
+			
+		}
+		
 	}
 	
 }
