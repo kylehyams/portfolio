@@ -249,6 +249,20 @@ a {
 		color: shade($action-color, 10%);
 	} */
 	
+	&.menu-link {
+		color: $olive-dark;
+		font-family: $dala-floda-fallback;
+		font-size: 4rem;
+		font-weight: 900;
+		line-height: 40px;
+		letter-spacing: 1px;
+		
+		.wf-active & {
+			font-family: $dala-floda;
+		}
+		
+	}
+	
 	&.nav__link {
 		color: $olive-darker;
 		font-family: $work-sans-fallback;

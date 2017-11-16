@@ -1,3 +1,11 @@
+/**
+ *
+  Z-index order:
+  1: Header
+  2: Mobile menu
+  3. Menu icon
+ */
+
 body {
 	background: $base-background-color;
 }
@@ -13,20 +21,23 @@ header {
 	position: relative;
 
 	.header__container {
-		@include span-columns(10);
-		@include shift(1);
-		@include display(flex);
-		@include flex-direction(row);
-		@include align-items(center);
-		@include justify-content(space-between);
+		@include span-columns(12);
 		position: absolute;
 		z-index: 1;
-		top: 16px;
-		@include media($medium-screen) {}
-		@include media($large-screen) {}
-		@include media($xlarge-screen) {}
 		
 		.home-link {
+			height: 44px;
+			@include position(absolute, 16px null null 27px);
+			
+			
+			@include media($medium-screen) {
+				height: 50px;
+				left: 40px;
+			}
+			
+			@include media($large-screen) {
+				left: 56px;
+			}
 		
 			.logo {
 				width: auto;
@@ -59,6 +70,8 @@ header {
 		.icon-menu {
 			width: 30px;
 			height: auto;
+			@include position(absolute, 25px 27px null null);
+			z-index: 3;
 			
 			@include media($medium-screen) {
 				display: none;
@@ -66,11 +79,17 @@ header {
 			
 		}
 		
+		// Nav links for tablets and up
 		.nav {
 			display: none;
 			
 			@include media($medium-screen) {
 				display: block;
+				@include position(absolute, 34px 40px null null);
+			}
+			
+			@include media($large-screen) {
+				right: 56px;
 			}
 			
 			li {
