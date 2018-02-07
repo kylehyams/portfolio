@@ -67,18 +67,6 @@ header {
 		
 		}
 		
-		.icon-menu {
-			width: 30px;
-			height: auto;
-			@include position(absolute, 25px 27px null null);
-			z-index: 3;
-			
-			@include media($medium-screen) {
-				display: none;
-			}
-			
-		}
-		
 		// Nav links for tablets and up
 		.nav {
 			display: none;

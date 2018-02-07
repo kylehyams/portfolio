@@ -69,6 +69,7 @@ gulp.task('compileSass', function() {
  */
  gulp.task('concatScripts', function() {
     gulp.src([
+            '_js/mobile-menu.js',
             '_js/picturefill.js'
         ])
         .pipe(concat('scripts.js'))
